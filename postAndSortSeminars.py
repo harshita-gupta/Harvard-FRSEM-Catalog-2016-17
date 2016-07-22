@@ -26,6 +26,21 @@ class Seminar:
         self.timeString = timeString
         self.timeObj = classTimes
 
+    def __str__(self):
+        esc = "\n"
+        str = self.name + esc +"Instructor: " +self.instructor + esc + "Course Number: " + self.courseNum
+        if self.fallSem:
+            str += "Fall 2016" + esc
+        else:
+            str += "Spring 2017" + esc
+        str += esc + "Catalog Number: " + self.catalogNum
+        str += esc + "Capacity: " + self.cap + " students" + esc
+        str += self.location + esc
+        str += self.timeString + esc
+        str += self.description + esc
+        str += "Course website: " +self.website
+        return str
+
 class Day(Enum):
     Unknown = 0
     Monday = 1
