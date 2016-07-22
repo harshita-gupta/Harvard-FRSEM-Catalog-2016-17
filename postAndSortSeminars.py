@@ -1,6 +1,5 @@
 __author__ = 'Harshita'
 
-
 from datetime import datetime
 from bs4 import BeautifulSoup
 from StringIO import StringIO
@@ -9,26 +8,6 @@ import re
 import time
 import pandas as pd
 from aenum import Enum
-
-
-
-baseurl = "http://freshsem.fas.harvard.edu/public/"
-url = "http://freshsem.fas.harvard.edu/public/sem-list.cgi?query=&searchdesc=1&sort=#1/"
-storage = StringIO()
-c = pycurl.Curl()
-c.setopt(c.URL, url)
-c.setopt(c.WRITEFUNCTION, storage.write)
-c.perform()
-c.close()
-content = storage.getvalue()
-htmldoc = BeautifulSoup(content)
-
-rows = htmldoc.find_all(href=re.compile('seminar'))
-seminarlinks = []
-for row in rows:
-    seminarlinks.append(baseurl + row['href'])
-
-seminars = []
 
 class Seminar:
     def __init__(self, name, instructor, courseNum, catalogNum, sem, cap, classTimes, timeString, loc, description, website):
@@ -60,7 +39,7 @@ def DaysForString(str):
     days = str.replace(" & "," and ").split(" and ")
     daysToReturn = []
     for day in days:
-        daysToReturn.append({"Monday": Day.Monday,"Tuesday": Day.Tuesday,"Wednesday": Day.Wednesday,"Thursday": Day.Thursday,"Friday": Day.Friday,}.get(day, Day.Unknown))
+        daysToReturn.append({"m": Day.Monday,"monday": Day.Monday,"mon": Day.Monday,"tues": Day.Tuesday,"t": Day.Tuesday,"tuesday": Day.Tuesday,"wednesday": Day.Wednesday,"w": Day.Wednesday,"wed": Day.Wednesday,"thursday": Day.Thursday,"th": Day.Thursday,"thurs": Day.Thursday,"friday": Day.Friday,"fri": Day.Friday,"f": Day.Friday}.get(day.lower(), Day.Unknown))
     return daysToReturn
 
 class TimeBlock:
@@ -144,8 +123,53 @@ def linkToSeminarObj(link):
     seminarobj = Seminar(name, instructor, courseNum, catNum, sem, cap, classTimes, timeString, location, description, website)
     return seminarobj
 
-for seminarlink in seminarlinks:
-    seminars.append(linkToSeminarObj(seminarlink))
+def retrieveSeminars():
+    print "Generating list of seminars..."
+    baseurl = "http://freshsem.fas.harvard.edu/public/"
+    url = "http://freshsem.fas.harvard.edu/public/sem-list.cgi?query=&searchdesc=1&sort=#1/"
+    storage = StringIO()
+    c = pycurl.Curl()
+    c.setopt(c.URL, url)
+    c.setopt(c.WRITEFUNCTION, storage.write)
+    c.perform()
+    c.close()
+    content = storage.getvalue()
+    htmldoc = BeautifulSoup(content)
+
+    rows = htmldoc.find_all(href=re.compile('seminar'))
+    seminarlinks = []
+    for row in rows:
+        seminarlinks.append(baseurl + row['href'])
+
+    seminars = []
+
+    print "Downloading seminar information..."
+
+    for seminarlink in seminarlinks:
+        seminarobj = linkToSeminarObj(seminarlink)
+        seminars.append(seminarobj)
+        print "Downloaded " + seminarobj.name
+
+    print "All seminars downloaded!"
+
+    return seminars
 
 
+# seminars = retrieveSeminars()
 
+print "Set up your filters for what seminars you want listed."
+
+print "Enter dates and times of all conflicting committments/ classes during which you can't take a seminar."
+print "Example: I plan to take CS61, which is T Th 2:30-4, so I cannot have a seminar then."
+
+conflictTimes = []
+classdatesToEnter = input("Do you have a conflict you'd like to enter? Respond with True or False.")
+
+while (classdatesToEnter == True or classdatesToEnter == "True"):
+    dayOfWeek = raw_input('Enter the day of your other committment, as M or m or Monday. Separate multiple days with \" and \".')
+    timeSlot = raw_input('Enter the time of the other committment, using 24 hour clock. Do not include PM or AM. '
+                     'Separate start and end time with a simple dash (-). Eg. \'13-15:30\'')
+    conflictTimes.append(timeStringToTimeBlockObjects(dayOfWeek + ", " + timeSlot))
+    classdatesToEnter = raw_input('Would you like to enter another conflict? Respond with True or False.')
+
+print conflictTimes
