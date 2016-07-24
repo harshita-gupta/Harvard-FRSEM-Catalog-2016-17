@@ -26,7 +26,7 @@ class Seminar:
 
     def __str__(self):
         esc = "\n"
-        str = repr(self.name) + esc +"Instructor: " + repr(self.instructor) + esc + "Course Number: " + self.courseNum
+        str = repr(self.name) + esc +"Instructor: " + repr(self.instructor) + esc + "Course Number: " + repr(self.courseNum) + esc
         if self.fallSem:
             str += "Fall 2016" + esc
         else:
@@ -168,6 +168,14 @@ def retrieveSeminars():
 
     return seminars
 
+def ynToTrueFalse(prompt):
+    input = raw_input(prompt)
+    if (input.lower().strip() == "y" or input.lower().strip() == "yes"):
+        return True
+    else:
+        return False
+
+
 # seminars = retrieveSeminars()
 # pickle.dump(seminars, open("seminars.pickle", "wb"))
 
@@ -177,34 +185,49 @@ displaySeminar = [True] * len(seminars)
 
 print "Set up your filters for what seminars you want listed."
 
+term = raw_input("Do you want to see seminars from Fall term, Spring term, or both? Respond with F, S, or B.")
+term = term.strip().lower()
+
 print "Enter dates and times of all conflicting committments/ classes during which you can't take a seminar."
 print "Example: I plan to take CS61, which is T Th 2:30-4, so I cannot have a seminar then."
 
 conflictTimes = []
-classdatesToEnter = input("Do you have a conflict you'd like to enter? Respond with True or False.")
+classdatesToEnter = ynToTrueFalse('Would you like to enter a conflict? Respond with Y or N.')
 
 while (classdatesToEnter == True or classdatesToEnter == "True"):
     dayOfWeek = raw_input('Enter the day of your other committment, as M or m or Monday. Separate multiple days with \" and \".')
     timeSlot = raw_input('Enter the time of the other committment, using 24 hour clock. Do not include PM or AM. '
                      'Separate start and end time with a simple dash (-). Eg. \'13-15:30\'')
     conflictTimes.extend(timeStringToTimeBlockObjects(dayOfWeek + ", " + timeSlot))
-    classdatesToEnter = raw_input('Would you like to enter another conflict? Respond with True or False.')
+    classdatesToEnter = ynToTrueFalse('Would you like to enter another conflict? Respond with Y or N.')
+
+searchTerms = raw_input("Enter keywords to search for, separated by spaces.")
+searchTerms = searchTerms.split()
 
 for n in range(0, len(seminars) - 1):
     seminar = seminars[n]
+
+    # Filtering based on term
+    if ((seminar.fallSem == True and term == "s") or (seminar.fallSem == False and term == "f")):
+        displaySeminar[n] = False
+
+    # Filtering based on search queries
+    if len(searchTerms) is not 0:
+        searchQuery = searchTerms[0] in str(seminar)
+        for searchTerm in searchTerms[1:]:
+            searchQuery = searchQuery or searchTerm in repr(seminar)
+        if searchQuery == False:
+            displaySeminar[n] = False
+            continue
+
+    # Filtering based on class timing
     classTimes = seminar.timeObj
     for classTime in classTimes:
         for conflictTime in conflictTimes:
             if conflictTime.conflicts(classTime) == True:
                 displaySeminar[n] = False
 
+
 for n in range(0, len(seminars) - 1):
     if displaySeminar[n] == True:
         print str(seminars[n]) + "\n"
-
-# for conflictTime in conflictTimes:
-#         print conflictTime.day
-#         print conflictTime.startTime
-#         print conflictTime.endTime
-
-
