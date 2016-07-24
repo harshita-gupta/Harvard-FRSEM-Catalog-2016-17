@@ -1,12 +1,10 @@
 __author__ = 'Harshita'
 
-from datetime import datetime
+import pickle
 from bs4 import BeautifulSoup
 from StringIO import StringIO
 import pycurl
 import re
-import time
-import pandas as pd
 from aenum import Enum
 
 class Seminar:
@@ -33,8 +31,8 @@ class Seminar:
             str += "Fall 2016" + esc
         else:
             str += "Spring 2017" + esc
-        str += esc + "Catalog Number: " + self.catalogNum
-        str += esc + "Capacity: " + self.cap + " students" + esc
+        str += esc + "Catalog Number: " + self.catalogNum + esc
+        # str += "Capacity: " + str(self.capacity) + " students" + esc
         str += self.location + esc
         str += self.timeString + esc
         str += self.description + esc
@@ -133,7 +131,7 @@ def linkToSeminarObj(link):
 
     location =meetingTimeElem.next_sibling.next_sibling.next_sibling.text
     website = seminarhtml.a['href']
-    description = seminarhtml.h2.next_sibling.next_sibling
+    description = seminarhtml.h2.next_sibling.next_sibling.text
 
     seminarobj = Seminar(name, instructor, courseNum, catNum, sem, cap, classTimes, timeString, location, description, website)
     return seminarobj
@@ -169,8 +167,12 @@ def retrieveSeminars():
 
     return seminars
 
-
 # seminars = retrieveSeminars()
+# pickle.dump(seminars, open("seminars.pickle", "wb"))
+
+seminars = pickle.load(open("seminars.pickle", "rb"))
+
+displaySeminar = [True] * len(seminars)
 
 print "Set up your filters for what seminars you want listed."
 
@@ -184,7 +186,23 @@ while (classdatesToEnter == True or classdatesToEnter == "True"):
     dayOfWeek = raw_input('Enter the day of your other committment, as M or m or Monday. Separate multiple days with \" and \".')
     timeSlot = raw_input('Enter the time of the other committment, using 24 hour clock. Do not include PM or AM. '
                      'Separate start and end time with a simple dash (-). Eg. \'13-15:30\'')
-    conflictTimes.append(timeStringToTimeBlockObjects(dayOfWeek + ", " + timeSlot))
+    conflictTimes.extend(timeStringToTimeBlockObjects(dayOfWeek + ", " + timeSlot))
     classdatesToEnter = raw_input('Would you like to enter another conflict? Respond with True or False.')
 
-print conflictTimes
+for n in range(0, len(seminars) - 1):
+    seminar = seminars[n]
+    for classTime in seminar.timeObj:
+        for conflictTime in conflictTimes:
+            if conflictTime.conflicts(classTime):
+                displaySeminar[n] = False
+
+for n in range(0, len(seminars) - 1):
+    if displaySeminar[n]:
+        print seminars[n].name
+
+# for conflictTime in conflictTimes:
+#         print conflictTime.day
+#         print conflictTime.startTime
+#         print conflictTime.endTime
+
+
