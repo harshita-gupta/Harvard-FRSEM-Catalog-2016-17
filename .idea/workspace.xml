@@ -24,15 +24,16 @@
       <file leaf-file-name="postAndSortSeminars.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/postAndSortSeminars.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="25.11111">
-              <caret line="200" column="30" selection-start-line="200" selection-start-column="30" selection-end-line="200" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.5184502">
+              <caret line="75" column="19" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
               <folding>
                 <element signature="e#25#38#0" expanded="true" />
+                <element signature="e#166#1318#0" expanded="false" />
                 <element signature="e#1341#1433#0" expanded="false" />
                 <element signature="e#1464#1943#0" expanded="false" />
-                <element signature="e#1966#2587#0" expanded="false" />
-                <element signature="e#2632#3580#0" expanded="false" />
-                <element signature="e#4873#5725#0" expanded="false" />
+                <element signature="e#2652#3600#0" expanded="false" />
+                <element signature="e#3634#4863#0" expanded="false" />
+                <element signature="e#4893#5745#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -301,7 +302,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26622662" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.9234801" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37421384" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -327,7 +328,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -338,11 +339,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#25#38#0" expanded="true" />
+            <element signature="e#166#1318#0" expanded="false" />
             <element signature="e#1341#1433#0" expanded="false" />
             <element signature="e#1464#1943#0" expanded="false" />
-            <element signature="e#1966#2587#0" expanded="false" />
-            <element signature="e#2632#3580#0" expanded="false" />
-            <element signature="e#4873#5725#0" expanded="false" />
+            <element signature="e#2652#3600#0" expanded="false" />
+            <element signature="e#3634#4863#0" expanded="false" />
+            <element signature="e#4893#5745#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -353,11 +355,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#25#38#0" expanded="true" />
+            <element signature="e#166#1318#0" expanded="false" />
             <element signature="e#1341#1433#0" expanded="false" />
             <element signature="e#1464#1943#0" expanded="false" />
-            <element signature="e#1966#2587#0" expanded="false" />
-            <element signature="e#2632#3580#0" expanded="false" />
-            <element signature="e#4873#5725#0" expanded="false" />
+            <element signature="e#2652#3600#0" expanded="false" />
+            <element signature="e#3634#4863#0" expanded="false" />
+            <element signature="e#4893#5745#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -368,11 +371,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#25#38#0" expanded="true" />
+            <element signature="e#166#1318#0" expanded="false" />
             <element signature="e#1341#1433#0" expanded="false" />
             <element signature="e#1464#1943#0" expanded="false" />
-            <element signature="e#1966#2587#0" expanded="false" />
-            <element signature="e#2632#3580#0" expanded="false" />
-            <element signature="e#4873#5725#0" expanded="false" />
+            <element signature="e#2652#3600#0" expanded="false" />
+            <element signature="e#3634#4863#0" expanded="false" />
+            <element signature="e#4893#5745#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -393,15 +397,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/postAndSortSeminars.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="25.11111">
-          <caret line="200" column="30" selection-start-line="200" selection-start-column="30" selection-end-line="200" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.5184502">
+          <caret line="75" column="19" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
           <folding>
             <element signature="e#25#38#0" expanded="true" />
+            <element signature="e#166#1318#0" expanded="false" />
             <element signature="e#1341#1433#0" expanded="false" />
             <element signature="e#1464#1943#0" expanded="false" />
-            <element signature="e#1966#2587#0" expanded="false" />
-            <element signature="e#2632#3580#0" expanded="false" />
-            <element signature="e#4873#5725#0" expanded="false" />
+            <element signature="e#2652#3600#0" expanded="false" />
+            <element signature="e#3634#4863#0" expanded="false" />
+            <element signature="e#4893#5745#0" expanded="false" />
           </folding>
         </state>
       </provider>

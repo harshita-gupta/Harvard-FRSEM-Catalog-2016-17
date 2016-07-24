@@ -73,6 +73,7 @@ class TimeBlock:
             return False
         if withTimeBlock.endTime <= self.startTime:
             return False
+        return True
 
 def timeStringToTimeBlockObjects(str):
     if "[unavailable]" in str:
@@ -191,13 +192,16 @@ while (classdatesToEnter == True or classdatesToEnter == "True"):
 
 for n in range(0, len(seminars) - 1):
     seminar = seminars[n]
-    for classTime in seminar.timeObj:
+    classTimes = seminar.timeObj
+    for classTime in classTimes:
         for conflictTime in conflictTimes:
-            if conflictTime.conflicts(classTime):
+            print "checking conflict for " + repr(conflictTime.day)+ repr(conflictTime.startTime) + " and " + repr(classTime.day)
+            if conflictTime.conflicts(classTime) == True:
                 displaySeminar[n] = False
+                print "set " + seminar.name + "to no display"
 
 for n in range(0, len(seminars) - 1):
-    if displaySeminar[n]:
+    if displaySeminar[n] == True:
         print seminars[n].name
 
 # for conflictTime in conflictTimes:
