@@ -26,17 +26,17 @@ class Seminar:
 
     def __str__(self):
         esc = "\n"
-        str = self.name + esc +"Instructor: " +self.instructor + esc + "Course Number: " + self.courseNum
+        str = repr(self.name) + esc +"Instructor: " + repr(self.instructor) + esc + "Course Number: " + self.courseNum
         if self.fallSem:
             str += "Fall 2016" + esc
         else:
             str += "Spring 2017" + esc
-        str += esc + "Catalog Number: " + self.catalogNum + esc
-        # str += "Capacity: " + str(self.capacity) + " students" + esc
-        str += self.location + esc
-        str += self.timeString + esc
-        str += self.description + esc
-        str += "Course website: " +self.website
+        str += "Catalog Number: " + repr(self.catalogNum) + esc
+        str += "Capacity: " + repr(self.capacity) + " students" + esc
+        str += repr(self.location) + esc
+        str += repr(self.timeString) + esc
+        str += repr(self.description) + esc
+        str += "Course website: " +repr(self.website)
         return str
 
 class Day(Enum):
@@ -195,14 +195,12 @@ for n in range(0, len(seminars) - 1):
     classTimes = seminar.timeObj
     for classTime in classTimes:
         for conflictTime in conflictTimes:
-            print "checking conflict for " + repr(conflictTime.day)+ repr(conflictTime.startTime) + " and " + repr(classTime.day)
             if conflictTime.conflicts(classTime) == True:
                 displaySeminar[n] = False
-                print "set " + seminar.name + "to no display"
 
 for n in range(0, len(seminars) - 1):
     if displaySeminar[n] == True:
-        print seminars[n].name
+        print str(seminars[n]) + "\n"
 
 # for conflictTime in conflictTimes:
 #         print conflictTime.day

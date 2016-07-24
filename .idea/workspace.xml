@@ -24,16 +24,14 @@
       <file leaf-file-name="postAndSortSeminars.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/postAndSortSeminars.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5184502">
-              <caret line="75" column="19" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.63653135">
+              <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
               <folding>
                 <element signature="e#25#38#0" expanded="true" />
-                <element signature="e#166#1318#0" expanded="false" />
-                <element signature="e#1341#1433#0" expanded="false" />
-                <element signature="e#1464#1943#0" expanded="false" />
-                <element signature="e#2652#3600#0" expanded="false" />
-                <element signature="e#3634#4863#0" expanded="false" />
-                <element signature="e#4893#5745#0" expanded="false" />
+                <element signature="e#1377#1469#0" expanded="false" />
+                <element signature="e#1500#1979#0" expanded="false" />
+                <element signature="e#2688#3636#0" expanded="false" />
+                <element signature="e#3670#4899#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -339,12 +337,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#25#38#0" expanded="true" />
-            <element signature="e#166#1318#0" expanded="false" />
-            <element signature="e#1341#1433#0" expanded="false" />
-            <element signature="e#1464#1943#0" expanded="false" />
-            <element signature="e#2652#3600#0" expanded="false" />
-            <element signature="e#3634#4863#0" expanded="false" />
-            <element signature="e#4893#5745#0" expanded="false" />
+            <element signature="e#1377#1469#0" expanded="false" />
+            <element signature="e#1500#1979#0" expanded="false" />
+            <element signature="e#2688#3636#0" expanded="false" />
+            <element signature="e#3670#4899#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -355,12 +351,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#25#38#0" expanded="true" />
-            <element signature="e#166#1318#0" expanded="false" />
-            <element signature="e#1341#1433#0" expanded="false" />
-            <element signature="e#1464#1943#0" expanded="false" />
-            <element signature="e#2652#3600#0" expanded="false" />
-            <element signature="e#3634#4863#0" expanded="false" />
-            <element signature="e#4893#5745#0" expanded="false" />
+            <element signature="e#1377#1469#0" expanded="false" />
+            <element signature="e#1500#1979#0" expanded="false" />
+            <element signature="e#2688#3636#0" expanded="false" />
+            <element signature="e#3670#4899#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -371,12 +365,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#25#38#0" expanded="true" />
-            <element signature="e#166#1318#0" expanded="false" />
-            <element signature="e#1341#1433#0" expanded="false" />
-            <element signature="e#1464#1943#0" expanded="false" />
-            <element signature="e#2652#3600#0" expanded="false" />
-            <element signature="e#3634#4863#0" expanded="false" />
-            <element signature="e#4893#5745#0" expanded="false" />
+            <element signature="e#1377#1469#0" expanded="false" />
+            <element signature="e#1500#1979#0" expanded="false" />
+            <element signature="e#2688#3636#0" expanded="false" />
+            <element signature="e#3670#4899#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -397,16 +389,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/postAndSortSeminars.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5184502">
-          <caret line="75" column="19" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.63653135">
+          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
           <folding>
             <element signature="e#25#38#0" expanded="true" />
-            <element signature="e#166#1318#0" expanded="false" />
-            <element signature="e#1341#1433#0" expanded="false" />
-            <element signature="e#1464#1943#0" expanded="false" />
-            <element signature="e#2652#3600#0" expanded="false" />
-            <element signature="e#3634#4863#0" expanded="false" />
-            <element signature="e#4893#5745#0" expanded="false" />
+            <element signature="e#1377#1469#0" expanded="false" />
+            <element signature="e#1500#1979#0" expanded="false" />
+            <element signature="e#2688#3636#0" expanded="false" />
+            <element signature="e#3670#4899#0" expanded="false" />
           </folding>
         </state>
       </provider>
