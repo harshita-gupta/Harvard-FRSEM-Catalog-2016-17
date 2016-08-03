@@ -1,21 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<html>
-  <head>
-    <title>Harvard Freshman Seminars 2016-17</title>
-  </head>
-  <body>
-      <h1>Hello, {{ user.nickname }}!</h1>
-      <table style = "width: 100%">
-      {% for seminar in seminars %}
-      	<tr>
-      		<td>{{seminar.name}}</td>
-      		<td></td>
-      		<td></td>
-      		<td></td>
-      		<td></td>
-      		<td></td>
-      	</tr>
-        {% endfor %}
-  </body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+  <h1>Hello, {{ user.nickname }}!</h1>
+  <table style = "width: 100%">
+    <tr>
+      <th>Seminar Name</th>
+      <th>Instructor Name</th>
+      <th>Seminar Time</th>
+      <th></th>
+    </tr>
+  {% for seminar in seminars %}
+  	<tr>
+  		<td>{{seminar.name}}</td>
+  		<td>{{seminar.instructor}}</td>
+  		<td>{{seminar.timeString}}</td>
+  		<td></td>
+  		<td></td>
+  		<td></td>
+  	</tr>
+    {% endfor %}
+{% endblock %}
