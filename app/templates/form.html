@@ -1,0 +1,17 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Pick Filters</h1>
+  <form action="" method="post" name="filter">
+      {{ form.hidden_tag() }}
+      <p>
+          Please enter which semesters you want material for:<br>
+          Fall Term: {{ form.fallterm }}
+          <br>
+          Spring Term: {{ form.springterm }}
+      </p>
+      <p>Search terms: {{ form.searchquery(size=80) }} </p>
+      <p><input type="submit" value="Load seminars"></p>
+  </form>
+{% endblock %}

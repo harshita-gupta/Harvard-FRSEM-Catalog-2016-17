@@ -1,4 +1,5 @@
-from flask import render_template
+from flask import render_template, flash, redirect
+from .forms import FilterForm
 from app import app
 import pickle
 from StringIO import StringIO
@@ -168,7 +169,11 @@ def retrieveSeminars():
 
     return seminars
 
-
+@app.route('/filter', methods = ['GET', 'POST'])
+def filter():
+    # creating form object and passing it to the template to use
+    filter = FilterForm()
+    return render_template('form.html', form = filter)
 
 # the fact that these route functions are above the method declaration make them correspond to the "index" method's function.
 @app.route('/')
