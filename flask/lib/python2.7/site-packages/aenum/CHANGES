@@ -1,0 +1,50 @@
+1.4.5
+=====
+
+revert AutoNumberEnum to custom __new__ instead of AutoNumber
+use _ignore_ to shield against AutoNumber magic
+inherit start and init settings from base Enums
+
+
+1.4.4
+=====
+
+enabled export as a decorator
+enabled _order_ to replace __order__
+enabled python2 support for settings, init, and start
+
+
+1.4.3
+=====
+
+support _ignore_ for dynamically creating class bodies
+
+
+1.4.2
+=====
+
+MultiValue, NoAlias, Unique, and init now work with Python 2
+
+
+1.4.1
+=====
+
+Py3: added Enum creation flags: Auto, MultiValue, NoAlias, Unique
+
+fixed extend_enum to honor Enum flags
+
+
+1.4.0
+=====
+
+When possible aenum inherits from Python's own enum.
+
+Breaking change: enum members now default to evaluating as True to maintain
+compatibility with the stdlib.
+
+Add your own __bool__ (__nonzero__ in Python 2) if need this behavior:
+
+    def __bool__(self):
+        return bool(self.value)
+    __nonzero__ = __bool__
+
