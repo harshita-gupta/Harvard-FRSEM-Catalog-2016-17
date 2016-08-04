@@ -5,13 +5,26 @@
   <h1>Pick Filters</h1>
   <form action="" method="post" name="filter">
       {{ form.hidden_tag() }}
-      <p>
+      <div id="selectsemester">
           Please enter which semesters you want material for:<br>
-          Fall Term: {{ form.fallterm }}
+          {{ form.fallterm }} Fall Term 
           <br>
-          Spring Term: {{ form.springterm }}
-      </p>
-      <p>Search terms: {{ form.searchquery(size=80) }} </p>
+          {{ form.springterm }}Spring Term: 
+      </div>
+      
+      <div id = "searchbox"><p>Search terms: {{ form.searchquery(size=80) }} </p></div>
+
+      <div id = "conflictbox" style = "width: 100%; display: flex;flex-wrap: wrap;">
+        {% for conflict in conflictForms %} 
+          <div class= "confict" style = "width : 18%">
+            <p>{{conflict.toInclude}}Doesn't conflict with below time slots:</p>
+            <p>{{conflict.dayField}}</p>
+            <p>{{conflict.startTime}}</p>
+            <p>{{conflict.endTime}}</p>
+          </div>
+        {% endfor %}
+      </div>
+      
       <p><input type="submit" value="Load seminars"></p>
   </form>
 {% endblock %}
