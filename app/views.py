@@ -175,7 +175,10 @@ def filterSeminars(seminarList, fallTerm, springTerm, conflicts, searchTerms):
     print searchTerms
     seminars = [x for x in seminarList if ((x.fallSem == True and fallTerm == True) or (x.fallSem == False and springTerm == True))]
     print seminars
-    # seminars = [x for x in seminars if (searchTerms != [] and any(keyword.lower() in repr(x).lower() for keyword in searchTerms))]
+
+    
+    # if searchTerms:
+    #     seminars = [x for x in seminars if any(keyword.lower() in repr(x).lower() for keyword in searchTerms)]
     # print seminars 
     # for seminar in seminars:
 
