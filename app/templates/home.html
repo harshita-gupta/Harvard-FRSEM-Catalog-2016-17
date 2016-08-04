@@ -4,49 +4,47 @@
       <form role="form" method="post">
           <div class="form-group">
             <div id="selectsemester">
-              Please enter which semesters you want material for:
+              Please enter which semesters you want material for: <br>
               <input type = "checkbox" name = "fallterm" value="F">Fall Term 
               <br>
               <input type = "checkbox" name = "springterm" value="S">Spring Term: 
               <br>
             </div>
             <div id="searchbox">
-              <p>Search terms:<input type="search" name="searchquery"> </p>
-            </div>
-            <div id="testnumber">
-              <input type="number" class="form-control" name="number-one" placeholder="Enter a number" required>
-              <input type="number" class="form-control" name="number-two" placeholder="Enter a number" required>
+              <p>Add search keywords:<input type="search" name="searchquery"> </p>
             </div>
           </div>  
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <br>
-      {% if value%}
-        <p>The calculated value is {{value}}</p>
+      {% if seminars%}
+        <h4>{{seminars|length}} seminars found</h4>
+        <table style = "width: 100%">
+          <tr>
+            <th>Seminar Name</th>
+            <th>Instructor Name</th>
+            <th>Seminar Time</th>
+            <th></th>
+          </tr>
+        {% for seminar in seminars %}
+          <tr>
+            <td>{{seminar.name}}</td>
+            <td>{{seminar.instructor}}</td>
+            <td>
+              {% if seminar.fallSem%} 
+                Fall 2016
+              {% else %}
+                Spring 2017
+              {% endif %}
+            </td>
+            <td>{{seminar.timeString}}</td>
+            <td>{{seminar.description}}</td>
+            <td></td>
+            <td></td>
+          </tr>
+          {% endfor %}
       {% endif %}
           
 <!--       <div id = "conflictbox" style = "width: 100%; display: flex;flex-wrap: wrap;">
  -->
-{% endblock %}
-
-{% block content %}
-  <h1>Sort through seminars and export your picks</h1>
-  <table style = "width: 100%">
-    <tr>
-      <th>Seminar Name</th>
-      <th>Instructor Name</th>
-      <th>Seminar Time</th>
-      <th></th>
-    </tr>
-  {% for seminar in seminars %}
-  	<tr>
-  		<td>{{seminar.name}}</td>
-  		<td>{{seminar.instructor}}</td>
-  		<td>{{seminar.timeString}}</td>
-  		<td></td>
-  		<td></td>
-  		<td></td>
-  	</tr>
-    {% endfor %}
-
 {% endblock %}
