@@ -1,4 +1,5 @@
-from flask import render_template, flash, redirect
+from copy import deepcopy
+from flask import render_template,  request
 from .forms import FilterForm, ConflictForm 
 from app import app
 import pickle
@@ -169,25 +170,78 @@ def retrieveSeminars():
 
     return seminars
 
-@app.route('/filter', methods = ['GET', 'POST'])
-def filter():
-    # creating form object and passing it to the template to use
-    filter = FilterForm()
-    conflictForms = []
-    for n in range(5):
-        conflictForms.append(ConflictForm())
-    return render_template('form.html', form = filter, conflictForms = conflictForms)
+def filterSeminars(seminarList, fallTerm, springTerm, conflicts, searchTerms):
+    searchTerms = searchTerms.split()
+    print searchTerms
+    seminars = [x for x in seminarList if ((x.fallSem == True and fallTerm == True) or (x.fallSem == False and springTerm == True))]
+    print seminars
+    # seminars = [x for x in seminars if (searchTerms != [] and any(keyword.lower() in repr(x).lower() for keyword in searchTerms))]
+    # print seminars 
+    # for seminar in seminars:
 
-# the fact that these route functions are above the method declaration make them correspond to the "index" method's function.
-@app.route('/')
-@app.route('/index')
-def index():
-    user = {'nickname': 'Harshita'}  # fake user
+        # Filtering based on term
+        # if ((seminar.fallSem == True and fallTerm == False) or (seminar.fallSem == False and springTerm == False)):
+        #     seminars.remove(seminar)
+        #     print "removed for semester mismatch"
+        #     print seminar.name
+            
+        # else:
+        #     print seminar.name
+        #     print seminar.fallSem
+
+        
+        # this has issues
+        # Filtering based on search queries
+        # if len(searchTerms) is not 0:
+        #     searchQuery = searchTerms[0] in str(seminar)
+        #     for searchTerm in searchTerms[1:]:
+        #         searchQuery = searchQuery or searchTerm in repr(seminar)
+        #     if searchQuery == False:
+        #         seminars.remove(seminar)
+        #         print "removed for keyword mismatch"
+        #         print seminar.name
+                
+
+    return seminars
+        # Filtering based on class timing
+        # classTimes = seminar.timeObj
+        # for classTime in classTimes:
+        #     for conflictTime in conflictTimes:
+        #         if conflictTime.conflicts(classTime) == True:
+        #             displaySeminar[n] = False
+
+
+@app.route('/', methods=['GET', 'POST'])
+@app.route('/home', methods=['GET', 'POST'])
+def home():
     # seminars = retrieveSeminars()
     # pickle.dump(seminars, open("seminars.pickle", "wb"))
     seminars = pickle.load(open("seminars.pickle", "rb"))
 
-    
-    return render_template('index.html', title = 'Home', user=user, seminars = seminars)
+    if request.method == 'POST':
+        searchKeywords = str(request.form['searchquery'])
+        if request.form.get('fallterm'):
+            fallTerm = True
+        else:
+            fallTerm = False
+        
+        if request.form.get('springterm'):
+            springTerm = True
+        else:
+            springTerm = False
+        
+        seminarsToDisplay = filterSeminars(seminars, fallTerm, springTerm, [], searchKeywords)
 
+        return render_template('home.html', seminars= seminarsToDisplay)
+    
+    return render_template('home.html')
+
+# @app.route('/', methods=['GET', 'POST'])
+# def home():
+#     if request.method == 'POST':
+#         value_one = int(request.form['number-one'])
+#         value_two = int(request.form['number-two'])
+#         total = value_one + value_two
+#         return render_template('index.html', value=total)
+#     return render_template('index.html')
 

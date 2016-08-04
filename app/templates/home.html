@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block form %}
+  <h1>Pick Filters</h1>
+      <form role="form" method="post">
+          <div class="form-group">
+            <div id="selectsemester">
+              Please enter which semesters you want material for: <br>
+              <input type = "checkbox" name = "fallterm" value="F">Fall Term 
+              <br>
+              <input type = "checkbox" name = "springterm" value="S">Spring Term: 
+              <br>
+            </div>
+            <div id="searchbox">
+              <p>Add search keywords:<input type="search" name="searchquery"> </p>
+            </div>
+          </div>  
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <br>
+      {% if seminars%}
+        <h4>{{seminars|length}} seminars found</h4>
+        <table style = "width: 100%">
+          <tr>
+            <th>Seminar Name</th>
+            <th>Instructor Name</th>
+            <th>Seminar Time</th>
+            <th></th>
+          </tr>
+        {% for seminar in seminars %}
+          <tr>
+            <td>{{seminar.name}}</td>
+            <td>{{seminar.instructor}}</td>
+            <td>
+              {% if seminar.fallSem%} 
+                Fall 2016
+              {% else %}
+                Spring 2017
+              {% endif %}
+            </td>
+            <td>{{seminar.timeString}}</td>
+            <td>{{seminar.description}}</td>
+            <td></td>
+            <td></td>
+          </tr>
+          {% endfor %}
+      {% endif %}
+          
+<!--       <div id = "conflictbox" style = "width: 100%; display: flex;flex-wrap: wrap;">
+ -->
+{% endblock %}
