@@ -89,7 +89,35 @@
 	                <label for "conflict1-endtime">End time:</label> 
 	                <input type="time" name = "conflict1-endtime" id="conflict1-endtime">
 	              </p>
-	            </div>    
+	            </div>   
+
+              <div id="conflict2" class="conflict">
+                <h4>Enter a conflict:</h4>
+                <p><label for="conflict2-day">Day(s):</label>
+                  <select required multiple form="form" id="conflict2-day"  list = "days" name="conflict2-day">
+                    <datalist id="days">
+                      <option value = "Monday">Monday</option>
+                      <option value = "Tuesday">Tuesday</option>
+                      <option value = "Wednesday">Wednesday</option>
+                      <option value = "Thursday">Thursday</option>
+                      <option value = "Friday">Friday</option>
+                      <option value = "Saturday">Saturday</option>
+                      <option value = "Sunday">Sunday</option>
+                    </datalist>
+                  </select>
+
+                </p>
+                <p>
+                  <label for "conflict2-starttime">Start time:</label> 
+                  <input type="time" name = "conflict2-starttime" id="conflict2-starttime">
+                </p>
+                <p>
+                  <label for "conflict2-endtime">End time:</label> 
+                  <input type="time" name = "conflict2-endtime" id="conflict2-endtime">
+                </p>
+              </div>   
+
+
 	            <a href="#" class = "add-conflict"><img src="plusbutton.png"> Add an additional time slot</a>
 	        </div>
 	      </div>  

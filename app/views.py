@@ -172,11 +172,11 @@ def retrieveSeminars():
 
 def filterSeminars(seminarList, fallTerm, springTerm, conflicts, searchTerms):
     searchTerms = searchTerms.split()
-    print searchTerms
+    # print searchTerms
     seminars = [x for x in seminarList if ((x.fallSem == True and fallTerm == True) or (x.fallSem == False and springTerm == True))]
     print seminars
 
-    
+
     # if searchTerms:
     #     seminars = [x for x in seminars if any(keyword.lower() in repr(x).lower() for keyword in searchTerms)]
     # print seminars 
@@ -220,31 +220,25 @@ def home():
     # seminars = retrieveSeminars()
     # pickle.dump(seminars, open("seminars.pickle", "wb"))
     seminars = pickle.load(open("seminars.pickle", "rb"))
-
+    form = request.form.copy()
     if request.method == 'POST':
-        searchKeywords = str(request.form['searchquery'])
-        if request.form.get('fallterm'):
-            fallTerm = True
-        else:
-            fallTerm = False
-        
-        if request.form.get('springterm'):
-            springTerm = True
-        else:
-            springTerm = False
-        
-        seminarsToDisplay = filterSeminars(seminars, fallTerm, springTerm, [], searchKeywords)
+        print form
+        searchKeywords = str(form['searchquery'])
+        fallTerm = True if form.get('fallterm') else False
+        springTerm = True if form.get('springterm') else False
+        allConflictValues = {k: v for k,v in form.iteritems() if k.startswith("conflict")}
+        conflicts = []
+        numNextConflict = 1
+        moreConflicts = True
+        while moreConflicts:
+            if allConflictValues.get("conflict"+ str(numNextConflict) + "-day"):
+                conflicts.append({"days": form.getlist("conflict"+ str(numNextConflict) + "-day"), "startTime" :  allConflictValues.get("conflict"+ str(numNextConflict) + "-starttime"), "endtime" : allConflictValues.get("conflict"+ str(numNextConflict) + "-endtime")})
+                numNextConflict+= 1
+            else:
+                moreConflicts = False
+        print conflicts
+        seminarsToDisplay = filterSeminars(seminars, fallTerm, springTerm, conflicts, searchKeywords)
 
         return render_template('home.html', seminars= seminarsToDisplay)
     
     return render_template('home.html')
-
-# @app.route('/', methods=['GET', 'POST'])
-# def home():
-#     if request.method == 'POST':
-#         value_one = int(request.form['number-one'])
-#         value_two = int(request.form['number-two'])
-#         total = value_one + value_two
-#         return render_template('index.html', value=total)
-#     return render_template('index.html')
-
