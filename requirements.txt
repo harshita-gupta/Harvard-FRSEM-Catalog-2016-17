@@ -40,6 +40,4 @@ virtualenv==15.0.2
 Werkzeug==0.11.10
 Whoosh==2.7.4
 WTForms==2.1
-wxPython==2.9.4.0
-wxPython-common==2.9.4.0
 xarray==0.7.2
