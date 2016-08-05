@@ -18,6 +18,7 @@ Flask-WTF==0.12
 flipflop==1.0
 fonttools==2.3
 guess-language==0.2
+gunicorn==19.1.1
 itsdangerous==0.24
 Jinja2==2.8
 MarkupSafe==0.23
