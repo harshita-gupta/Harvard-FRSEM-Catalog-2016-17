@@ -1,6 +1,5 @@
 from copy import deepcopy
 from flask import render_template,  request
-from .forms import FilterForm, ConflictForm 
 from app import app
 import pickle
 from StringIO import StringIO
