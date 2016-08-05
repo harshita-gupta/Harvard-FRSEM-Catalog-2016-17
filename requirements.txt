@@ -25,7 +25,6 @@ numexpr==2.6.1
 numpy==1.11.1
 pandas==0.18.1
 pbr==1.10.0
-Polygon==2.0.1
 pycurl==7.43.0
 python-dateutil==2.5.3
 python-openid==2.2.5
