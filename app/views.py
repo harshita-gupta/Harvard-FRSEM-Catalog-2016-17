@@ -178,45 +178,17 @@ def retrieveSeminars():
 
 def filterSeminars(seminarList, fallTerm, springTerm, conflicts, searchTerms):
     conflictTimes = []
-    for conflict in conflicts: 
+        searchTerms = searchTerms.split()
 
-        days = " and ".join(conflict.get("days"))
-        new = timeStringToTimeBlockObjects(str(days)  + ", " + str(conflict.get("starttime")) + "-" + str(conflict.get("endtime")))
-
-        conflictTimes.extend(new)
+    for conflict in conflicts
+        conflictTimes.extend(timeStringToTimeBlockObjects(str(" and ".join(conflict.get("days")))  + ", " + str(conflict.get("starttime")) + "-" + str(conflict.get("endtime"))))
 
     seminars = [seminar for seminar in seminarList if ((((seminar.fallSem == True and fallTerm == True) or (seminar.fallSem == False and springTerm == True))) and (not any(seminarTime.conflicts(conflictTime) for conflictTime in conflictTimes for seminarTime in seminar.timeObj)))]
-    print seminars
 
-    searchTerms = searchTerms.split()
-    # print searchTerms
-
-    # if searchTerms:
-    #     seminars = [x for x in seminars if any(keyword.lower() in repr(x).lower() for keyword in searchTerms)]
-    # print seminars 
-    # for seminar in seminars:
-
-        
-        # this has issues
-        # Filtering based on search queries
-        # if len(searchTerms) is not 0:
-        #     searchQuery = searchTerms[0] in str(seminar)
-        #     for searchTerm in searchTerms[1:]:
-        #         searchQuery = searchQuery or searchTerm in repr(seminar)
-        #     if searchQuery == False:
-        #         seminars.remove(seminar)
-        #         print "removed for keyword mismatch"
-        #         print seminar.name
-                
+    if searchTerms:
+        seminars = [x for x in seminars if any(keyword.lower() in str(x).lower() for keyword in searchTerms)]
 
     return seminars
-        # Filtering based on class timing
-        # classTimes = seminar.timeObj
-        # for classTime in classTimes:
-        #     for conflictTime in conflictTimes:
-        #         if conflictTime.conflicts(classTime) == True:
-        #             displaySeminar[n] = False
-
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/home', methods=['GET', 'POST'])
