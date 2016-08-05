@@ -10,7 +10,8 @@ from bs4 import BeautifulSoup
 from aenum import Enum
 
 alert = ""
-
+studentApplyPortal = "http://www.freshsem.fas.harvard.edu/student/"
+applyLinks = ""
 class Seminar:
     def __init__(self, name, instructor, courseNum, catalogNum, sem, cap, classTimes, timeString, loc, description, website):
         self.name = name
@@ -25,8 +26,10 @@ class Seminar:
             self.fallSem = False;
         self.description = description
         self.website = website
-        self.timeString = timeString
+        self.timeString = timeString.split("Please note")[0]
+        if self.timeString.endswith(" - "): self.timeString = self.timeString.replace(" - ", "")
         self.timeObj = classTimes
+        self.applyLink = ""
 
     def __str__(self):
         esc = "\n"
@@ -135,7 +138,7 @@ def linkToSeminarObj(link):
     classTimes =  timeStringToTimeBlockObjects(meetingTimeString)
 
     location =meetingTimeElem.next_sibling.next_sibling.next_sibling.text
-    website = seminarhtml.a['href']
+    website = seminarhtml.a['href'] if not seminarhtml.a['href']=="sem-list.cgi#1" else None
     description = seminarhtml.h2.next_sibling.next_sibling.text
 
     seminarobj = Seminar(name, instructor, courseNum, catNum, sem, cap, classTimes, timeString, location, description, website)
@@ -157,14 +160,15 @@ def retrieveSeminars():
     rows = htmldoc.find_all(href=re.compile('seminar'))
     seminarlinks = []
     for row in rows:
-        seminarlinks.append(baseurl + row['href'])
+        seminarlinks.append((baseurl + row['href'], studentApplyPortal + row['href']))
 
     seminars = []
 
     print "Downloading seminar information..."
 
     for seminarlink in seminarlinks:
-        seminarobj = linkToSeminarObj(seminarlink)
+        seminarobj = linkToSeminarObj(seminarlink[0])
+        seminarobj.applyLink =  seminarlink[1]
         seminars.append(seminarobj)
         print "Downloaded " + seminarobj.name
 

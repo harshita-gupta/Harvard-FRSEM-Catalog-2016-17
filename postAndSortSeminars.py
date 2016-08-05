@@ -21,7 +21,7 @@ class Seminar:
             self.fallSem = False;
         self.description = description
         self.website = website
-        self.timeString = timeString
+        self.timeString = timeString.replace("Please note that the 1st day of classes, Weds, August 31, will follow a Monday schedule to make up for the Labor Day holiday on Monday, Sept 5th.", "")
         self.timeObj = classTimes
 
     def __str__(self):

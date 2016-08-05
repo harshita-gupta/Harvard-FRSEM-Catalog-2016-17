@@ -123,8 +123,14 @@
 	      </td>
 	      <td>{{seminar.timeString}}</td>
 	      <td>{{seminar.description}}</td>
-	      <td></td>
-	      <td></td>
+	      <td>
+          {% if seminar.website %}
+          <a href="{{seminar.website}}">Seminar Website</a>
+          {% endif %}
+        </td>
+	      <td>
+          <a href="{{seminar.applyLink}}">Apply for this seminar</a>
+        </td>
 	    </tr>
 	    {% endfor %}
 	  </table>  
