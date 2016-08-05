@@ -178,10 +178,8 @@ def retrieveSeminars():
 
 def filterSeminars(seminarList, fallTerm, springTerm, conflicts, searchTerms):
     conflictTimes = []
-        searchTerms = searchTerms.split()
-
-    for conflict in conflicts
-        conflictTimes.extend(timeStringToTimeBlockObjects(str(" and ".join(conflict.get("days")))  + ", " + str(conflict.get("starttime")) + "-" + str(conflict.get("endtime"))))
+    searchTerms = searchTerms.split()
+    for conflict in conflicts: conflictTimes.extend(timeStringToTimeBlockObjects(str(" and ".join(conflict.get("days")))  + ", " + str(conflict.get("starttime")) + "-" + str(conflict.get("endtime"))))
 
     seminars = [seminar for seminar in seminarList if ((((seminar.fallSem == True and fallTerm == True) or (seminar.fallSem == False and springTerm == True))) and (not any(seminarTime.conflicts(conflictTime) for conflictTime in conflictTimes for seminarTime in seminar.timeObj)))]
 
