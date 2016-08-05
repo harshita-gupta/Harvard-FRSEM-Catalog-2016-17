@@ -6,14 +6,13 @@
   	</script>
   	<script type="text/javascript">
 		    var counter = 2;
-		    $('.add-conflict').click(function(event){
+	    	$(document).on("click", ".addconflict", function(){
 		        event.preventDefault();
-		        alert("ran something");
 		        var newconflict = jQuery('<div id="conflict1" class="conflict"><h4>Enter a conflict:</h4><p><label for="conflict'+counter + '-day">Day(s):</label><select required multiple form="form" id="conflict'+counter + '-day"  list = "days" name="conflict'+counter + '-day"><datalist id="days"><option value = "Monday">Monday</option><option value = "Tuesday">Tuesday</option><option value = "Wednesday">Wednesday</option><option value = "Thursday">Thursday</option><option value = "Friday">Friday</option><option value = "Saturday">Saturday</option><option value = "Sunday">Sunday</option></datalist></select></p><p><label for "conflict'+counter + '-starttime">Start time:</label><input type="time" name = "conflict'+counter + '-starttime" id="conflict'+counter + '-starttime"></p><p><label for "conflict'+counter + '-endtime">End time:</label> <input type="time" name = "conflict'+counter + '-endtime" id="conflict'+counter + '-endtime"></p></div>');
-		            counter++;
-		        jQuery('div.conflict-list').append(newconflict);
-
-		    });
+	            counter++;
+	        	jQuery('.conflict-list').append(newconflict);
+	    	});
+		    
   	</script>
     <title>Harvard Freshman Seminars 2016-17</title>
   </head>
@@ -36,7 +35,7 @@
 	            <h3 for = "searchquery">Add search keywords: </h3>
 	            <input type="search" id="searchquery" name="searchquery"> </p>
 	        </div>
-	        <div class="conflict-list filter">
+	        <div class="conflict-list">
 	          <h3> 
 	            Seminar should <strong>not</strong> conflict with:
 	          </h3>
@@ -91,10 +90,9 @@
                   <input type="time" name = "conflict2-endtime" id="conflict2-endtime">
                 </p>
               </div>   
-
-
-	            <a href="#" class = "add-conflict"><img src="plusbutton.png"> Add an additional time slot</a>
 	        </div>
+	       	<button type="button" class="addconflict">Add an additional time slot</button>
+
 	      </div>  
 	    <button type="submit" class="btn btn-default">Submit</button>
 	  </form>

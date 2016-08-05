@@ -9,7 +9,6 @@ import re
 from bs4 import BeautifulSoup
 from aenum import Enum
 
-
 alert = ""
 
 class Seminar:
@@ -81,7 +80,6 @@ class TimeBlock:
         return True
 
 def timeStringToTimeBlockObjects(str):
-    print str
     if "[unavailable]" in str:
         return [TimeBlock(Day.Unknown, 0,0,0, 0)]
 
@@ -91,11 +89,9 @@ def timeStringToTimeBlockObjects(str):
     for day in days:
         if day != Day.Unknown:
             times = timeStrings[1].strip().split(" ")[0].split("-")
-            print times
             startTimes = times[0].split(":")
             endTimes = times[1].split(":")
 
-            print startTimes
             startH = float(startTimes[0])
             if len(startTimes) > 1:
                 startM = float(startTimes[1])
@@ -182,9 +178,7 @@ def filterSeminars(seminarList, fallTerm, springTerm, conflicts, searchTerms):
     for conflict in conflicts: conflictTimes.extend(timeStringToTimeBlockObjects(str(" and ".join(conflict.get("days")))  + ", " + str(conflict.get("starttime")) + "-" + str(conflict.get("endtime"))))
 
     seminars = [seminar for seminar in seminarList if ((((seminar.fallSem == True and fallTerm == True) or (seminar.fallSem == False and springTerm == True))) and (not any(seminarTime.conflicts(conflictTime) for conflictTime in conflictTimes for seminarTime in seminar.timeObj)))]
-
-    if searchTerms:
-        seminars = [x for x in seminars if any(keyword.lower() in str(x).lower() for keyword in searchTerms)]
+    if searchTerms: seminars = [x for x in seminars if any(keyword.lower() in str(x).lower() for keyword in searchTerms)]
 
     return seminars
 
@@ -197,7 +191,6 @@ def home():
     form = request.form.copy()
     if request.method == 'POST':
         alert = ""
-        print form
         searchKeywords = str(form['searchquery'])
         fallTerm = True if form.get('fallterm') else False
         springTerm = True if form.get('springterm') else False
@@ -211,7 +204,6 @@ def home():
                 numNextConflict+= 1
             else:
                 moreConflicts = False
-        print conflicts
         seminarsToDisplay = filterSeminars(seminars, fallTerm, springTerm, conflicts, searchKeywords)
 
         return render_template('home.html', seminars= seminarsToDisplay, alert = alert)
