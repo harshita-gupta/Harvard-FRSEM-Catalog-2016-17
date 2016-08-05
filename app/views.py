@@ -9,6 +9,9 @@ import re
 from bs4 import BeautifulSoup
 from aenum import Enum
 
+
+alert = ""
+
 class Seminar:
     def __init__(self, name, instructor, courseNum, catalogNum, sem, cap, classTimes, timeString, loc, description, website):
         self.name = name
@@ -78,6 +81,7 @@ class TimeBlock:
         return True
 
 def timeStringToTimeBlockObjects(str):
+    print str
     if "[unavailable]" in str:
         return [TimeBlock(Day.Unknown, 0,0,0, 0)]
 
@@ -87,9 +91,11 @@ def timeStringToTimeBlockObjects(str):
     for day in days:
         if day != Day.Unknown:
             times = timeStrings[1].strip().split(" ")[0].split("-")
+            print times
             startTimes = times[0].split(":")
             endTimes = times[1].split(":")
 
+            print startTimes
             startH = float(startTimes[0])
             if len(startTimes) > 1:
                 startM = float(startTimes[1])
@@ -171,26 +177,24 @@ def retrieveSeminars():
     return seminars
 
 def filterSeminars(seminarList, fallTerm, springTerm, conflicts, searchTerms):
-    searchTerms = searchTerms.split()
-    # print searchTerms
-    seminars = [x for x in seminarList if ((x.fallSem == True and fallTerm == True) or (x.fallSem == False and springTerm == True))]
+    conflictTimes = []
+    for conflict in conflicts: 
+
+        days = " and ".join(conflict.get("days"))
+        new = timeStringToTimeBlockObjects(str(days)  + ", " + str(conflict.get("starttime")) + "-" + str(conflict.get("endtime")))
+
+        conflictTimes.extend(new)
+
+    seminars = [seminar for seminar in seminarList if ((((seminar.fallSem == True and fallTerm == True) or (seminar.fallSem == False and springTerm == True))) and (not any(seminarTime.conflicts(conflictTime) for conflictTime in conflictTimes for seminarTime in seminar.timeObj)))]
     print seminars
 
+    searchTerms = searchTerms.split()
+    # print searchTerms
 
     # if searchTerms:
     #     seminars = [x for x in seminars if any(keyword.lower() in repr(x).lower() for keyword in searchTerms)]
     # print seminars 
     # for seminar in seminars:
-
-        # Filtering based on term
-        # if ((seminar.fallSem == True and fallTerm == False) or (seminar.fallSem == False and springTerm == False)):
-        #     seminars.remove(seminar)
-        #     print "removed for semester mismatch"
-        #     print seminar.name
-            
-        # else:
-        #     print seminar.name
-        #     print seminar.fallSem
 
         
         # this has issues
@@ -222,23 +226,24 @@ def home():
     seminars = pickle.load(open("seminars.pickle", "rb"))
     form = request.form.copy()
     if request.method == 'POST':
+        alert = ""
         print form
         searchKeywords = str(form['searchquery'])
         fallTerm = True if form.get('fallterm') else False
         springTerm = True if form.get('springterm') else False
         allConflictValues = {k: v for k,v in form.iteritems() if k.startswith("conflict")}
         conflicts = []
-        numNextConflict = 1
+        numNextConflict = 1 
         moreConflicts = True
         while moreConflicts:
             if allConflictValues.get("conflict"+ str(numNextConflict) + "-day"):
-                conflicts.append({"days": form.getlist("conflict"+ str(numNextConflict) + "-day"), "startTime" :  allConflictValues.get("conflict"+ str(numNextConflict) + "-starttime"), "endtime" : allConflictValues.get("conflict"+ str(numNextConflict) + "-endtime")})
+                conflicts.append({"days": form.getlist("conflict"+ str(numNextConflict) + "-day"), "starttime" :  allConflictValues.get("conflict"+ str(numNextConflict) + "-starttime"), "endtime" : allConflictValues.get("conflict"+ str(numNextConflict) + "-endtime")})
                 numNextConflict+= 1
             else:
                 moreConflicts = False
         print conflicts
         seminarsToDisplay = filterSeminars(seminars, fallTerm, springTerm, conflicts, searchKeywords)
 
-        return render_template('home.html', seminars= seminarsToDisplay)
+        return render_template('home.html', seminars= seminarsToDisplay, alert = alert)
     
     return render_template('home.html')
