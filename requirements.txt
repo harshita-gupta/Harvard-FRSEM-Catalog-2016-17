@@ -42,3 +42,7 @@ Werkzeug==0.11.10
 Whoosh==2.7.4
 WTForms==2.1
 xarray==0.7.2
+Padding==0.4 
+keen==0.3.24 
+pycrypto==2.6.1 
+requests==2.10.0

@@ -1,5 +1,5 @@
 from copy import deepcopy
-from flask import render_template,  request
+from flask import render_template,  request, jsonify
 from app import app
 import pickle
 from StringIO import StringIO
@@ -7,6 +7,12 @@ import pycurl
 import re
 from bs4 import BeautifulSoup
 from aenum import Enum
+import socket
+import keen
+keen.project_id = "57a4ec410727190b418cc7fc"
+keen.write_key = "3e8d74ce621627a69bb65ba5a0e7eb4877fe51c1ea62703708a3c28e5bbaaf53c28f0b97d7f3baddf19d98e9a08b634c88fbc13c9c3b39a46873f2f0154dd4e461488c13bce00d4cb2c913a2586c3fff6151d3540b74d6b3518cc3eba8b7cbcf"
+KEEN_PROJECT_ID="57a4ec410727190b418cc7fc"
+KEEN_WRITE_KEY="3e8d74ce621627a69bb65ba5a0e7eb4877fe51c1ea62703708a3c28e5bbaaf53c28f0b97d7f3baddf19d98e9a08b634c88fbc13c9c3b39a46873f2f0154dd4e461488c13bce00d4cb2c913a2586c3fff6151d3540b74d6b3518cc3eba8b7cbcf"
 
 alert = ""
 studentApplyPortal = "http://www.freshsem.fas.harvard.edu/student/"
@@ -188,10 +194,12 @@ def filterSeminars(seminarList, fallTerm, springTerm, conflicts, searchTerms):
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/home', methods=['GET', 'POST'])
 def home():
+
     # seminars = retrieveSeminars()
     # pickle.dump(seminars, open("seminars.pickle", "wb"))
     seminars = pickle.load(open("seminars.pickle", "rb"))
     form = request.form.copy()
+
     if request.method == 'POST':
         alert = ""
         searchKeywords = str(form['searchquery'])
@@ -207,8 +215,10 @@ def home():
                 numNextConflict+= 1
             else:
                 moreConflicts = False
+        keen.add_event("seminar_loads", {"fallterm" : str(fallTerm), "springterm" : str(springTerm), "searches": str(searchKeywords), "conflicts": str(conflicts) })
         seminarsToDisplay = filterSeminars(seminars, fallTerm, springTerm, conflicts, searchKeywords)
 
         return render_template('home.html', seminars= seminarsToDisplay, alert = alert)
-    
+
+    keen.add_event("homepage_loads", {"ip":request.remote_addr})
     return render_template('home.html')
