@@ -1,0 +1,294 @@
+h1 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 35px;
+  line-height: 44px;
+  font-weight: 200;
+}
+
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.bg-image {
+  padding: 5%;
+  background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .24), hsla(0, 0%, 100%, .56)), url('../images/snowy-harvard.jpg');
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, .24), hsla(0, 0%, 100%, .56)), url('../images/snowy-harvard.jpg');
+  background-position: 0px 0px, 0px 0px;
+  background-size: auto, cover;
+  background-attachment: scroll, fixed;
+}
+
+.form-container {
+  padding: 100px;
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.spacer {
+  height: 30px;
+}
+
+.conflict1-day {
+  margin-bottom: 20px;
+}
+
+.conflict {
+  display: block;
+  min-width: 150px;
+  margin-right: 1%;
+  margin-bottom: 3%;
+  margin-left: 1%;
+  padding: 5px 10px;
+  border: 1px solid #3a3a3a;
+}
+
+.conflict-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  float: none;
+  clear: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-content: space-around;
+  -ms-flex-line-pack: distribute;
+  align-content: space-around;
+}
+
+.add-conflict-btn {
+  display: block;
+  margin-bottom: 2px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 0px none #000;
+  background-color: #3a3a3a;
+  opacity: 0.72;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0px;
+}
+
+.seminar {
+  padding: 10px;
+}
+
+.seminar.bg-lightgrey {
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: #eee;
+}
+
+.seminar-name {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-decoration: none;
+}
+
+.instructor-name {
+  margin-bottom: 10px;
+  -webkit-align-self: baseline;
+  -ms-flex-item-align: baseline;
+  align-self: baseline;
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+}
+
+.apply-button {
+  display: block;
+  height: 100%;
+  margin: auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: 10px none #fff;
+  background-color: #a41034;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.seminar-time {
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-align-self: baseline;
+  -ms-flex-item-align: baseline;
+  align-self: baseline;
+}
+
+.seminar-info-container {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.seminar-description-column {
+  position: static;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.submit-button {
+  background-color: #a41034;
+  font-size: 19px;
+  font-weight: 300;
+}
+
+.search-button-container {
+  text-align: center;
+}
+
+.search-results {
+  border: 1px solid #000;
+}
+
+.seminar-description {
+  margin-bottom: 20px;
+  line-height: 160%;
+}
+
+.seminar-semester {
+  display: block;
+  margin-bottom: 20px;
+  padding: 5px;
+  border: 2px solid #a41034;
+  color: #a41034;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.seminar-location {
+  margin-bottom: 10px;
+}
+
+.super-spacer {
+  height: 70px;
+}
+
+.results-found-text {
+  font-size: 16px;
+}
+
+.entry-header {
+  margin-bottom: 20px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border: 2px solid #a41034;
+  color: #a41034;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.title-header {
+  padding: 5px 3px;
+  border: 2px none #a41034;
+  background-color: #a41034;
+  font-family: 'Crimson Text', sans-serif;
+  color: #fff;
+  font-size: 29px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.page-footer {
+  margin-top: 50px;
+  text-align: center;
+}
+
+html.w-mod-js *[data-ix="bottom-fade"] {
+  opacity: 0;
+  -webkit-transform: translate(0px, 50px);
+  -ms-transform: translate(0px, 50px);
+  transform: translate(0px, 50px);
+}
+
+@media (max-width: 991px) {
+  .form-container {
+    padding: 50px;
+  }
+  .seminar.bg-lightgrey {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .apply-button {
+    display: block;
+    font-size: 14px;
+  }
+  .seminar-description {
+    text-align: left;
+  }
+}
+
+@media (max-width: 767px) {
+  .form-container {
+    padding: 25px;
+  }
+  .apply-button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 479px) {
+  .bg-image {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .form-container {
+    padding: 25px;
+  }
+  .apply-button {
+    font-size: 14px;
+  }
+}
+

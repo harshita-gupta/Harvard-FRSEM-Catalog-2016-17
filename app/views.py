@@ -3,7 +3,7 @@ from app import app
 import pickle
 import socket
 import keen
-from model import filterSeminars
+from model import filterSeminars, Seminar, TimeBlock, Day
 from datasource import retrieveSeminars
 
 keen.project_id = "57a4ec410727190b418cc7fc"
@@ -54,7 +54,7 @@ def home():
             seminars, fallTerm, springTerm, conflicts, searchKeywords)
 
         return render_template(
-            'home.html', seminars=seminarsToDisplay, alert=alert)
+            'index.html', seminars=seminarsToDisplay, alert=alert)
 
     # keen.add_event("homepage_loads", {"ip":request.remote_addr})
-    return render_template('home.html')
+    return render_template('index.html')

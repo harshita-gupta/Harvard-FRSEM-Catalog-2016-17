@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. http://www.webflow.com-->
+<!-- Last Published: Sun Aug 07 2016 06:23:36 GMT+0000 (UTC) -->
+<html data-wf-page="57a3ea8de4dd66dc54adf44a" data-wf-site="57a3ea8de4dd66dc54adf449">
+<head>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
+  </script>
+  <script type="text/javascript">
+      var counter = 2;
+      $(document).on("click", ".addconflict", function(){
+          event.preventDefault();
+          var newconflict = jQuery('<div class="conflict" id="conflict'+counter + '"><h4 class="entry-header">Entry '+counter + '</h4><label for="conflict'+counter + '-day">Day:</label><select class="conflict'+counter + '-day w-select" data-name="conflict'+counter + '-day" id="conflict'+counter + '-day" multiple="multiple" form="form" name="conflict'+counter + '-day"><option value="Monday">Monday</option><option value="Tuesday">Tuesday</option><option value="Wednesday">Wednesday</option><option value="Thursday">Thursday</option><option value="Friday">Friday</option><option value="Saturday">Saturday</option></select><label for="conflict'+counter + '-starttime">Start Time:</label><input class="w-input" data-name="conflict'+counter + '-starttime" id="conflict'+counter + '-starttime" maxlength="256" name="conflict'+counter + '-starttime" placeholder="i.e. 10:30" type="time"><label for="conflict'+counter + '-endtime">End Time:</label><input class="w-input" data-name="conflict'+counter + '-endtime" id="conflict'+counter + '-endtime" maxlength="256" name="conflict'+counter + '-endtime" placeholder="i.e. 1" type="time"></div>');
+            counter++;
+          jQuery('.conflict-list').append(newconflict);
+      });
+  </script>
+  <title>Harvard College Freshman Seminars 2016-17</title>  
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="../static/css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="../static/css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="../static/css/lauren-s-top-notch-site.webflow.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script type="text/javascript">
+    WebFont.load({
+      google: {
+        families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Raleway:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic","Crimson Text:regular,italic,600,600italic,700,700italic"]
+      }
+    });
+  </script>
+  <script src="../static/js/modernizr.js" type="text/javascript"></script>
+  <link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
+</head>
+<body>
+  <div class="bg-image">
+    <div class="form-container w-container" data-ix="bottom-fade">
+      <h1 class="title-header">Harvard College Freshman Seminars 2016-17</h1>
+      <div class="spacer"></div>
+      <div class="w-form">
+        <form data-name="form" id="form" method="post" name="wf-form-form">
+          <label for="name">Show seminars from:</label>
+          <div class="w-checkbox">
+            <input checked="checked" class="w-checkbox-input" data-name="fallterm" id="fallterm" name="fallterm" type="checkbox" value="F">
+            <label class="w-form-label" for="fallterm">Fall Term</label>
+          </div>
+          <div class="w-checkbox">
+            <input checked="checked" class="w-checkbox-input" name = "springterm" id = "springterm" type="checkbox" value="S">
+            <label class="w-form-label" for="node">Spring Term</label>
+          </div>
+          <div class="spacer"></div>
+          <label for="searchquery">Add search keywords - separate with spaces:</label>
+          <input class="w-input" data-name="searchquery" id="searchquery" maxlength="256" name="searchquery" placeholder="ie. anthropology literature comparative" type="text">
+          <div class="spacer"></div>
+          <h3>Seminars should <em>not</em> conflict with:</h3>
+          <div class="spacer"></div>
+          <div class="conflict-box conflict-list" id="conflict-box">
+            <div class="conflict" id="conflict1">
+              <h4 class="entry-header">Entry 1</h4>
+              <label for="conflict1-day">Day:</label>
+              <select class="conflict1-day w-select" data-name="conflict1-day" id="conflict1-day" multiple="multiple" form="form" name="conflict1-day">
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+              </select>
+              <label for="conflict1-starttime">Start Time:</label>
+              <input class="w-input" data-name="conflict1-starttime" id="conflict1-starttime" maxlength="256" name="conflict1-starttime" placeholder="i.e. 10:30" type="time">
+              <label for="conflict1-endtime">End Time:</label>
+              <input class="w-input" data-name="conflict1-endtime" id="conflict1-endtime" maxlength="256" name="conflict1-endtime" placeholder="i.e. 1" type="time">
+            </div>
+          </div>
+          <div class="spacer"></div>
+          <div class="new-conflict-container"><a class="add-conflict-btn w-button addconflict">Add Conflict Entry</a>
+          </div>
+          <div class="super-spacer"></div>
+          <div class="search-button-container">
+            <input class="submit-button w-button btn btn-default" data-wait="Please wait..." type="submit" value="Search Seminars">
+          </div>
+        </form>
+        <div class="w-form-done">
+          <div>Thank you! Your submission has been received!</div>
+        </div>
+        <div class="w-form-fail">
+          <div>Oops! Something went wrong while submitting the form</div>
+        </div>
+      </div>
+      <div class="super-spacer"></div>
+      {# {% if seminars %} #}
+      <div class="results-found-sum">
+        <div class="results-found-text" data-ix="bottom-fade">{{seminars|length}} seminars found...</div>
+        <div class="spacer"></div>
+      </div>
+      <div class="search-results" data-ix="bottom-fade">
+        
+        {# {% for n in range((seminars|length)/2) %} #}
+        <div class="bg-lightgrey seminar" data-ix="bottom-fade">
+          <div>
+            <h4 class="seminar-name">Research at the Harvard Forest: Global Change Ecology-Forests, Ecosystem Function, the Future</h4>
+          </div>
+          <div class="w-row">
+            <div class="seminar-info-container w-col w-col-3">
+              <div class="seminar-semester">Spring</div>
+              <div class="instructor-name">Instructor Name</div>
+              <div class="seminar-time">12:30-4:30</div>
+              <div class="seminar-location">113 Thayer</div><a class="seminar-website" href="#">Seminar Website</a>
+            </div>
+            <div class="seminar-description-column w-col w-col-9">
+              <p class="seminar-description">Heart diseases have plagued humans since ancient times, but only in the past century has heart disease become epidemic throughout the world. Despite great progress in prevention and therapy, heart diseases will be major causes of death and disability throughout the next century. Modernization of civilization has played a major role in the rise of heart disease. Conversely, advances in heart disease have powerfully changed society and our personal daily behavior. In this seminar, we will examine some of the major intersection events between heart disease and modern society over the past century and consider how this could change the next century in America and throughout the world. The topics include highly visible events such as the deaths of American Presidents from cardiovascular disease, leading to the rise of biomedical research in the US, as well as relatively obscure events like a young physician inserting a urinary drainage tube into his heart—ultimately generating the modern life-saving treatment for heart attacks. We will explore how major lifestyle factors such as tobacco, alcohol, exercise and diet affect health, and how economics and politics often play a role in the complex relationship of health and society. In addition, we will visit a high technology modern cardiology facility and watch some technology in action. There is no additional essay question for this seminar.</p>
+            </div>
+          </div><a class="apply-button w-button" href="#">Apply for Seminar</a>
+        </div>
+        
+        <div class="bg-white seminar" data-ix="bottom-fade">
+          <div>
+            <h4 class="seminar-name">Research at the Harvard Forest: Global Change Ecology-Forests, Ecosystem Function, the Future</h4>
+          </div>
+          <div class="w-row">
+            <div class="seminar-info-container w-col w-col-3">
+              <div class="seminar-semester">Spring</div>
+              <div class="instructor-name">Instructor Name</div>
+              <div class="seminar-time">12:30-4:30</div>
+              <div class="seminar-location">113 Thayer</div><a class="seminar-website" href="#">Seminar Website</a>
+            </div>
+            <div class="seminar-description-column w-col w-col-9">
+              <p class="seminar-description">Heart diseases have plagued humans since ancient times, but only in the past century has heart disease become epidemic throughout the world. Despite great progress in prevention and therapy, heart diseases will be major causes of death and disability throughout the next century. Modernization of civilization has played a major role in the rise of heart disease. Conversely, advances in heart disease have powerfully changed society and our personal daily behavior. In this seminar, we will examine some of the major intersection events between heart disease and modern society over the past century and consider how this could change the next century in America and throughout the world. The topics include highly visible events such as the deaths of American Presidents from cardiovascular disease, leading to the rise of biomedical research in the US, as well as relatively obscure events like a young physician inserting a urinary drainage tube into his heart—ultimately generating the modern life-saving treatment for heart attacks. We will explore how major lifestyle factors such as tobacco, alcohol, exercise and diet affect health, and how economics and politics often play a role in the complex relationship of health and society. In addition, we will visit a high technology modern cardiology facility and watch some technology in action. There is no additional essay question for this seminar.</p>
+            </div>
+          </div><a class="apply-button w-button" href="#">Apply for Seminar</a>
+        </div>
+
+      </div>
+      {# {% endif %} #}
+      <div class="page-footer">Developed by <a href="mailto:hgupta@college.harvard.edu">Harshita Gupta</a> '20, designed by Lauren Weldon</div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+  <script src="../static/js/webflow.js" type="text/javascript"></script>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+</body>
+</html>
