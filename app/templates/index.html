@@ -38,8 +38,7 @@
     <div class="form-container w-container" data-ix="bottom-fade">
       <h1 class="title-header">Harvard College Freshman Seminars 2016-17</h1>
       <div class="spacer"></div>
-      <div class="w-form">
-        <form data-name="form" id="form" method="post" name="wf-form-form">
+        <form role="form" method="post" id="form">
           <label for="name">Show seminars from:</label>
           <div class="w-checkbox">
             <input checked="checked" class="w-checkbox-input" data-name="fallterm" id="fallterm" name="fallterm" type="checkbox" value="F">
@@ -87,52 +86,42 @@
         <div class="w-form-fail">
           <div>Oops! Something went wrong while submitting the form</div>
         </div>
-      </div>
       <div class="super-spacer"></div>
-      {# {% if seminars %} #}
+      {% if seminars %}
       <div class="results-found-sum">
         <div class="results-found-text" data-ix="bottom-fade">{{seminars|length}} seminars found...</div>
         <div class="spacer"></div>
       </div>
       <div class="search-results" data-ix="bottom-fade">
         
-        {# {% for n in range((seminars|length)/2) %} #}
-        <div class="bg-lightgrey seminar" data-ix="bottom-fade">
+        {% for seminar in seminars %}
+        <div class="{% if loop.index0 is divisibleby 2 %}bg-white {% else %} bg-lightgrey {% endif%}seminar" data-ix="bottom-fade">
           <div>
-            <h4 class="seminar-name">Research at the Harvard Forest: Global Change Ecology-Forests, Ecosystem Function, the Future</h4>
+            <h4 class="seminar-name">{{seminar.name}}</h4>
           </div>
           <div class="w-row">
             <div class="seminar-info-container w-col w-col-3">
-              <div class="seminar-semester">Spring</div>
-              <div class="instructor-name">Instructor Name</div>
-              <div class="seminar-time">12:30-4:30</div>
-              <div class="seminar-location">113 Thayer</div><a class="seminar-website" href="#">Seminar Website</a>
+              <div class="seminar-semester">
+                {% if seminar.fallSem %} 
+                Fall
+                {% else %}
+                Spring
+                {% endif %}
+              </div>
+              <div class="instructor-name">Instructor Name: {{seminar.instructor}}</div>
+              <div class="seminar-time">{{seminar.timeString}}</div>
+              <div class="seminar-location">{{seminar.location}}</div>
+              <a class="seminar-website" href="{{seminar.website}}">Seminar Website</a>
             </div>
             <div class="seminar-description-column w-col w-col-9">
-              <p class="seminar-description">Heart diseases have plagued humans since ancient times, but only in the past century has heart disease become epidemic throughout the world. Despite great progress in prevention and therapy, heart diseases will be major causes of death and disability throughout the next century. Modernization of civilization has played a major role in the rise of heart disease. Conversely, advances in heart disease have powerfully changed society and our personal daily behavior. In this seminar, we will examine some of the major intersection events between heart disease and modern society over the past century and consider how this could change the next century in America and throughout the world. The topics include highly visible events such as the deaths of American Presidents from cardiovascular disease, leading to the rise of biomedical research in the US, as well as relatively obscure events like a young physician inserting a urinary drainage tube into his heart—ultimately generating the modern life-saving treatment for heart attacks. We will explore how major lifestyle factors such as tobacco, alcohol, exercise and diet affect health, and how economics and politics often play a role in the complex relationship of health and society. In addition, we will visit a high technology modern cardiology facility and watch some technology in action. There is no additional essay question for this seminar.</p>
+              <p class="seminar-description">{{seminar.description}}</p>
             </div>
-          </div><a class="apply-button w-button" href="#">Apply for Seminar</a>
+          </div><a class="apply-button w-button" target = "_blank" href="{{seminar.applyLink}}">Apply for Seminar</a>
         </div>
         
-        <div class="bg-white seminar" data-ix="bottom-fade">
-          <div>
-            <h4 class="seminar-name">Research at the Harvard Forest: Global Change Ecology-Forests, Ecosystem Function, the Future</h4>
-          </div>
-          <div class="w-row">
-            <div class="seminar-info-container w-col w-col-3">
-              <div class="seminar-semester">Spring</div>
-              <div class="instructor-name">Instructor Name</div>
-              <div class="seminar-time">12:30-4:30</div>
-              <div class="seminar-location">113 Thayer</div><a class="seminar-website" href="#">Seminar Website</a>
-            </div>
-            <div class="seminar-description-column w-col w-col-9">
-              <p class="seminar-description">Heart diseases have plagued humans since ancient times, but only in the past century has heart disease become epidemic throughout the world. Despite great progress in prevention and therapy, heart diseases will be major causes of death and disability throughout the next century. Modernization of civilization has played a major role in the rise of heart disease. Conversely, advances in heart disease have powerfully changed society and our personal daily behavior. In this seminar, we will examine some of the major intersection events between heart disease and modern society over the past century and consider how this could change the next century in America and throughout the world. The topics include highly visible events such as the deaths of American Presidents from cardiovascular disease, leading to the rise of biomedical research in the US, as well as relatively obscure events like a young physician inserting a urinary drainage tube into his heart—ultimately generating the modern life-saving treatment for heart attacks. We will explore how major lifestyle factors such as tobacco, alcohol, exercise and diet affect health, and how economics and politics often play a role in the complex relationship of health and society. In addition, we will visit a high technology modern cardiology facility and watch some technology in action. There is no additional essay question for this seminar.</p>
-            </div>
-          </div><a class="apply-button w-button" href="#">Apply for Seminar</a>
-        </div>
-
+        {% endfor %}
       </div>
-      {# {% endif %} #}
+      {% endif %}
       <div class="page-footer">Developed by <a href="mailto:hgupta@college.harvard.edu">Harshita Gupta</a> '20, designed by Lauren Weldon</div>
     </div>
   </div>
