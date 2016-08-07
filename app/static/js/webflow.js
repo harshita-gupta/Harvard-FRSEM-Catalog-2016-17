@@ -4601,5 +4601,6 @@
  * Webflow: Interactions: Init
  */
 Webflow.require('ix').init([
-  {"slug":"bottom-fade","name":"bottom-fade","value":{"style":{"opacity":0,"x":"0px","y":"50px","z":"0px"},"triggers":[{"type":"scroll","stepsA":[{"wait":200},{"opacity":1,"transition":"transform 500ms ease 0ms, opacity 500ms ease 0ms","x":"0px","y":"0px","z":"0px"}],"stepsB":[]}]}}
+  {"slug":"bottom-fade","name":"bottom-fade","value":{"style":{"opacity":0,"x":"0px","y":"50px","z":"0px"},"triggers":[{"type":"scroll","stepsA":[{"wait":200},{"opacity":1,"transition":"transform 500ms ease 0ms, opacity 500ms ease 0ms","x":"0px","y":"0px","z":"0px"}],"stepsB":[]}]}},
+  {"slug":"right-fade","name":"right-fade","value":{"style":{"opacity":0,"x":"40px","y":"0px","z":"0px"},"triggers":[{"type":"scroll","stepsA":[{"wait":200},{"opacity":1,"transition":"transform 500ms ease 0ms, opacity 500ms ease 0ms","x":"0px","y":"0px","z":"0px"}],"stepsB":[]}]}}
 ]);
