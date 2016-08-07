@@ -56,5 +56,5 @@ def home():
         return render_template(
             'index.html', seminars=seminarsToDisplay, alert=alert)
 
-    # keen.add_event("homepage_loads", {"ip":request.remote_addr})
+    keen.add_event("homepage_loads", {"ip":request.remote_addr})
     return render_template('index.html')
