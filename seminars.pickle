@@ -1,5 +1,5 @@
 (lp0
-(iapp.views
+(iapp.model
 Seminar
 p1
 (dp2
@@ -24,7 +24,7 @@ p10
 sS'timeObj'
 p11
 (lp12
-(iapp.views
+(iapp.model
 TimeBlock
 p13
 (dp14
@@ -33,7 +33,7 @@ p15
 F17.0
 sS'day'
 p16
-capp.views
+capp.model
 Day
 p17
 (I1
@@ -66,7 +66,7 @@ sS'catalogNum'
 p31
 V159722
 p32
-sba(iapp.views
+sba(iapp.model
 Seminar
 p33
 (dp34
@@ -83,7 +83,7 @@ VPrerequisites: High school level calculus and physics\u000a\u000aThe quest to
 p36
 sg11
 (lp37
-(iapp.views
+(iapp.model
 TimeBlock
 p38
 (dp39
@@ -114,7 +114,7 @@ p46
 sg31
 V109627
 p47
-sba(iapp.views
+sba(iapp.model
 Seminar
 p48
 (dp49
@@ -131,7 +131,7 @@ VPrerequisite: this seminar will be geared to students with a background in chem
 p51
 sg11
 (lp52
-(iapp.views
+(iapp.model
 TimeBlock
 p53
 (dp54
@@ -162,7 +162,7 @@ p61
 sg31
 V159838
 p62
-sba(iapp.views
+sba(iapp.model
 Seminar
 p63
 (dp64
@@ -181,7 +181,7 @@ VAmerica is a sleep\u2010starved nation. The Institute of Medicine estimates tha
 p67
 sg11
 (lp68
-(iapp.views
+(iapp.model
 TimeBlock
 p69
 (dp70
@@ -212,7 +212,7 @@ p77
 sg31
 V159839
 p78
-sba(iapp.views
+sba(iapp.model
 Seminar
 p79
 (dp80
@@ -229,7 +229,7 @@ VThe role of a person's genetic background in determining whether he or she will
 p82
 sg11
 (lp83
-(iapp.views
+(iapp.model
 TimeBlock
 p84
 (dp85
@@ -257,7 +257,7 @@ p90
 sg31
 V159990
 p91
-sba(iapp.views
+sba(iapp.model
 Seminar
 p92
 (dp93
@@ -274,7 +274,7 @@ VPrerequisite:  High school science\u000a\u000aNote: I especially invite those
 p95
 sg11
 (lp96
-(iapp.views
+(iapp.model
 TimeBlock
 p97
 (dp98
@@ -302,7 +302,7 @@ p103
 sg31
 V123659
 p104
-sba(iapp.views
+sba(iapp.model
 Seminar
 p105
 (dp106
@@ -319,7 +319,7 @@ VNote: There are no prerequisites but an interview may be required to have a bal
 p108
 sg11
 (lp109
-(iapp.views
+(iapp.model
 TimeBlock
 p110
 (dp111
@@ -347,7 +347,7 @@ p116
 sg31
 V160118
 p117
-sba(iapp.views
+sba(iapp.model
 Seminar
 p118
 (dp119
@@ -366,7 +366,7 @@ VInfinity captivates the imagination. A child stands between two mirrors and see
 p122
 sg11
 (lp123
-(iapp.views
+(iapp.model
 TimeBlock
 p124
 (dp125
@@ -394,7 +394,7 @@ p130
 sg31
 V160198
 p131
-sba(iapp.views
+sba(iapp.model
 Seminar
 p132
 (dp133
@@ -413,7 +413,7 @@ VThis course introduces students to the history and ethics of anatomy, and their
 p136
 sg11
 (lp137
-(iapp.views
+(iapp.model
 TimeBlock
 p138
 (dp139
@@ -441,7 +441,7 @@ p144
 sg31
 V160215
 p145
-sba(iapp.views
+sba(iapp.model
 Seminar
 p146
 (dp147
@@ -460,7 +460,7 @@ VNote: Students are required to watch the assigned movie prior to class, and mus
 p150
 sg11
 (lp151
-(iapp.views
+(iapp.model
 TimeBlock
 p152
 (dp153
@@ -488,7 +488,7 @@ p158
 sg31
 V125133
 p159
-sba(iapp.views
+sba(iapp.model
 Seminar
 p160
 (dp161
@@ -505,7 +505,7 @@ VPrerequisite: This seminar is recommended for students with a strong background
 p163
 sg11
 (lp164
-(iapp.views
+(iapp.model
 TimeBlock
 p165
 (dp166
@@ -533,7 +533,7 @@ p171
 sg31
 V109319
 p172
-sba(iapp.views
+sba(iapp.model
 Seminar
 p173
 (dp174
@@ -550,7 +550,7 @@ VNote: The seminar will make use of the Clay Telescope on the roof of the Scienc
 p176
 sg11
 (lp177
-(iapp.views
+(iapp.model
 TimeBlock
 p178
 (dp179
@@ -578,7 +578,7 @@ p184
 sg31
 V161261
 p185
-sba(iapp.views
+sba(iapp.model
 Seminar
 p186
 (dp187
@@ -595,7 +595,7 @@ VPrerequisite: Please note that this seminar will be geared to students likely t
 p189
 sg11
 (lp190
-(iapp.views
+(iapp.model
 TimeBlock
 p191
 (dp192
@@ -623,7 +623,7 @@ p197
 sg31
 V109575
 p198
-sba(iapp.views
+sba(iapp.model
 Seminar
 p199
 (dp200
@@ -640,7 +640,7 @@ VThe history of surgery begins with the Hippocratic physicians whose principles 
 p202
 sg11
 (lp203
-(iapp.views
+(iapp.model
 TimeBlock
 p204
 (dp205
@@ -668,7 +668,7 @@ p210
 sg31
 V127976
 p211
-sba(iapp.views
+sba(iapp.model
 Seminar
 p212
 (dp213
@@ -685,7 +685,7 @@ VThe history of surgery begins with the Hippocratic physicians whose principles 
 p215
 sg11
 (lp216
-(iapp.views
+(iapp.model
 TimeBlock
 p217
 (dp218
@@ -713,7 +713,7 @@ p223
 sg31
 V119619
 p224
-sba(iapp.views
+sba(iapp.model
 Seminar
 p225
 (dp226
@@ -730,7 +730,7 @@ VNOTE: The seminar will occasionally meet longer for field trips or other projec
 p228
 sg11
 (lp229
-(iapp.views
+(iapp.model
 TimeBlock
 p230
 (dp231
@@ -758,7 +758,7 @@ p236
 sg31
 V110305
 p237
-sba(iapp.views
+sba(iapp.model
 Seminar
 p238
 (dp239
@@ -777,7 +777,7 @@ VThe seminar's challenge will be to deepen our understanding of human developmen
 p242
 sg11
 (lp243
-(iapp.views
+(iapp.model
 TimeBlock
 p244
 (dp245
@@ -805,7 +805,7 @@ p250
 sg31
 V
 p251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p252
 (dp253
@@ -824,7 +824,7 @@ VSynthetic biology is an emerging multi-disciplinary field of research aimed at 
 p256
 sg11
 (lp257
-(iapp.views
+(iapp.model
 TimeBlock
 p258
 (dp259
@@ -852,7 +852,7 @@ p264
 sg31
 V108555
 p265
-sba(iapp.views
+sba(iapp.model
 Seminar
 p266
 (dp267
@@ -869,7 +869,7 @@ VPrerequisites: This course welcomes science and non-science concentrators. Some
 p269
 sg11
 (lp270
-(iapp.views
+(iapp.model
 TimeBlock
 p271
 (dp272
@@ -897,7 +897,7 @@ p277
 sg31
 V120755
 p278
-sba(iapp.views
+sba(iapp.model
 Seminar
 p279
 (dp280
@@ -914,7 +914,7 @@ VPrerequisites: There are no prerequisites, but an interest in law, psychology, 
 p282
 sg11
 (lp283
-(iapp.views
+(iapp.model
 TimeBlock
 p284
 (dp285
@@ -942,7 +942,7 @@ p290
 sg31
 V120969
 p291
-sba(iapp.views
+sba(iapp.model
 Seminar
 p292
 (dp293
@@ -959,7 +959,7 @@ VNote: The course is intended for those who have scored -5- on AP Biology or Che
 p295
 sg11
 (lp296
-(iapp.views
+(iapp.model
 TimeBlock
 p297
 (dp298
@@ -987,7 +987,7 @@ p303
 sg31
 V108257
 p304
-sba(iapp.views
+sba(iapp.model
 Seminar
 p305
 (dp306
@@ -1006,7 +1006,7 @@ VJohn Steinbeck wrote: "It is a common experience that a problem difficult at ni
 p309
 sg11
 (lp310
-(iapp.views
+(iapp.model
 TimeBlock
 p311
 (dp312
@@ -1034,7 +1034,7 @@ p317
 sg31
 V107340
 p318
-sba(iapp.views
+sba(iapp.model
 Seminar
 p319
 (dp320
@@ -1053,7 +1053,7 @@ VThis seminar will offer an integrated historical-neurobiological-neurological i
 p323
 sg11
 (lp324
-(iapp.views
+(iapp.model
 TimeBlock
 p325
 (dp326
@@ -1080,7 +1080,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=421&backlink
 p331
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p332
 (dp333
@@ -1097,7 +1097,7 @@ VBlood has long symbolized life and death, hope and horror, health and disease. 
 p335
 sg11
 (lp336
-(iapp.views
+(iapp.model
 TimeBlock
 p337
 (dp338
@@ -1125,7 +1125,7 @@ p343
 sg31
 V125286
 p344
-sba(iapp.views
+sba(iapp.model
 Seminar
 p345
 (dp346
@@ -1142,7 +1142,7 @@ VThis seminar will consider the conditions of a cell necessary to support life. 
 p348
 sg11
 (lp349
-(iapp.views
+(iapp.model
 TimeBlock
 p350
 (dp351
@@ -1170,7 +1170,7 @@ p356
 sg31
 V156181
 p357
-sba(iapp.views
+sba(iapp.model
 Seminar
 p358
 (dp359
@@ -1187,7 +1187,7 @@ VThis interactive seminar will allow students to obtain greater understanding of
 p361
 sg11
 (lp362
-(iapp.views
+(iapp.model
 TimeBlock
 p363
 (dp364
@@ -1215,7 +1215,7 @@ p369
 sg31
 V108829
 p370
-sba(iapp.views
+sba(iapp.model
 Seminar
 p371
 (dp372
@@ -1232,7 +1232,7 @@ VFriedrich Nietzsche addresses some of the big questions of human existence in a
 p374
 sg11
 (lp375
-(iapp.views
+(iapp.model
 TimeBlock
 p376
 (dp377
@@ -1260,7 +1260,7 @@ p382
 sg31
 V159736
 p383
-sba(iapp.views
+sba(iapp.model
 Seminar
 p384
 (dp385
@@ -1277,7 +1277,7 @@ VNote: No prior knowledge of economics, or experience with media or magic perfor
 p387
 sg11
 (lp388
-(iapp.views
+(iapp.model
 TimeBlock
 p389
 (dp390
@@ -1305,7 +1305,7 @@ p395
 sg31
 V109471
 p396
-sba(iapp.views
+sba(iapp.model
 Seminar
 p397
 (dp398
@@ -1322,7 +1322,7 @@ VWhen you hear Japanese poetry mentioned, do you automatically think "haiku"?  T
 p400
 sg11
 (lp401
-(iapp.views
+(iapp.model
 TimeBlock
 p402
 (dp403
@@ -1350,7 +1350,7 @@ p408
 sg31
 V156179
 p409
-sba(iapp.views
+sba(iapp.model
 Seminar
 p410
 (dp411
@@ -1369,7 +1369,7 @@ VWhat can we know and how can we know it?  Skeptics argue that knowledge is impo
 p414
 sg11
 (lp415
-(iapp.views
+(iapp.model
 TimeBlock
 p416
 (dp417
@@ -1397,7 +1397,7 @@ p422
 sg31
 V121901
 p423
-sba(iapp.views
+sba(iapp.model
 Seminar
 p424
 (dp425
@@ -1416,7 +1416,7 @@ VIn Book X of The Confessions Augustine wrote, "I have learned to love you late,
 p428
 sg11
 (lp429
-(iapp.views
+(iapp.model
 TimeBlock
 p430
 (dp431
@@ -1444,7 +1444,7 @@ p436
 sg31
 V121903
 p437
-sba(iapp.views
+sba(iapp.model
 Seminar
 p438
 (dp439
@@ -1463,7 +1463,7 @@ VPrerequisites: Prior knowledge of ancient history or ancient languages is not r
 p442
 sg11
 (lp443
-(iapp.views
+(iapp.model
 TimeBlock
 p444
 (dp445
@@ -1491,7 +1491,7 @@ p450
 sg31
 V109474
 p451
-sba(iapp.views
+sba(iapp.model
 Seminar
 p452
 (dp453
@@ -1510,7 +1510,7 @@ VNote: The seminar meets in the Art Study Center of the Harvard Art Museums, whe
 p456
 sg11
 (lp457
-(iapp.views
+(iapp.model
 TimeBlock
 p458
 (dp459
@@ -1537,7 +1537,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=402&backlink
 p464
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p465
 (dp466
@@ -1556,7 +1556,7 @@ VNote: The class will engage in hands-on sessions in the kitchen.\u000a\u000aT
 p469
 sg11
 (lp470
-(iapp.views
+(iapp.model
 TimeBlock
 p471
 (dp472
@@ -1583,7 +1583,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=403&backlink
 p477
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p478
 (dp479
@@ -1600,7 +1600,7 @@ VThis seminar introduces the main traditions of African American political thoug
 p481
 sg11
 (lp482
-(iapp.views
+(iapp.model
 TimeBlock
 p483
 (dp484
@@ -1631,7 +1631,7 @@ p491
 sg31
 V159835
 p492
-sba(iapp.views
+sba(iapp.model
 Seminar
 p493
 (dp494
@@ -1648,7 +1648,7 @@ VThrough the study of Tibetan Buddhism, the members of the seminar will consider
 p496
 sg11
 (lp497
-(iapp.views
+(iapp.model
 TimeBlock
 p498
 (dp499
@@ -1676,7 +1676,7 @@ p504
 sg31
 V116129
 p505
-sba(iapp.views
+sba(iapp.model
 Seminar
 p506
 (dp507
@@ -1695,7 +1695,7 @@ VNote: No previous experience of drawing or animation is required. There will be
 p510
 sg11
 (lp511
-(iapp.views
+(iapp.model
 TimeBlock
 p512
 (dp513
@@ -1722,7 +1722,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=404&backlink
 p518
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p519
 (dp520
@@ -1741,7 +1741,7 @@ VPlease Note:
 p523
 sg11
 (lp524
-(iapp.views
+(iapp.model
 TimeBlock
 p525
 (dp526
@@ -1768,7 +1768,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=405&backlink
 p531
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p532
 (dp533
@@ -1785,7 +1785,7 @@ VThis is an advanced writing course on writing about poetry, music and art. The 
 p535
 sg11
 (lp536
-(iapp.views
+(iapp.model
 TimeBlock
 p537
 (dp538
@@ -1813,7 +1813,7 @@ p543
 sg31
 V108514
 p544
-sba(iapp.views
+sba(iapp.model
 Seminar
 p545
 (dp546
@@ -1830,7 +1830,7 @@ VOf the three fundamental concepts of Western civilization\u2014truth, goodness,
 p548
 sg11
 (lp549
-(iapp.views
+(iapp.model
 TimeBlock
 p550
 (dp551
@@ -1857,7 +1857,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=441&backlink
 p556
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p557
 (dp558
@@ -1874,7 +1874,7 @@ VNote: Students will be required to attend theater performances on these dates: 
 p560
 sg11
 (lp561
-(iapp.views
+(iapp.model
 TimeBlock
 p562
 (dp563
@@ -1902,7 +1902,7 @@ p568
 sg31
 V126838
 p569
-sba(iapp.views
+sba(iapp.model
 Seminar
 p570
 (dp571
@@ -1919,7 +1919,7 @@ VPrerequisite: Requires knowledge of one language besides English.\u000a\u000a
 p573
 sg11
 (lp574
-(iapp.views
+(iapp.model
 TimeBlock
 p575
 (dp576
@@ -1946,7 +1946,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=442&backlink
 p581
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p582
 (dp583
@@ -1963,7 +1963,7 @@ VThis course begins by examining an international repertoire of traditional stor
 p585
 sg11
 (lp586
-(iapp.views
+(iapp.model
 TimeBlock
 p587
 (dp588
@@ -1990,7 +1990,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=444&backlink
 p593
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p594
 (dp595
@@ -2009,7 +2009,7 @@ VIn this course, we read a highly diverse group of engaging texts in English tra
 p598
 sg11
 (lp599
-(iapp.views
+(iapp.model
 TimeBlock
 p600
 (dp601
@@ -2036,7 +2036,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=445&backlink
 p606
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p607
 (dp608
@@ -2053,7 +2053,7 @@ VThis seminar will deal with an innovative approach to comparative Mythology, de
 p610
 sg11
 (lp611
-(iapp.views
+(iapp.model
 TimeBlock
 p612
 (dp613
@@ -2081,7 +2081,7 @@ p618
 sg31
 V109498
 p619
-sba(iapp.views
+sba(iapp.model
 Seminar
 p620
 (dp621
@@ -2098,7 +2098,7 @@ VMoney matters aims to engage first-year students with the economics, politics a
 p623
 sg11
 (lp624
-(iapp.views
+(iapp.model
 TimeBlock
 p625
 (dp626
@@ -2125,7 +2125,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=461&backlink
 p631
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p632
 (dp633
@@ -2142,7 +2142,7 @@ VHorror films and horror stories have been in existence since movies and stories
 p635
 sg11
 (lp636
-(iapp.views
+(iapp.model
 TimeBlock
 p637
 (dp638
@@ -2173,7 +2173,7 @@ p645
 sg31
 V156293
 p646
-sba(iapp.views
+sba(iapp.model
 Seminar
 p647
 (dp648
@@ -2190,7 +2190,7 @@ VThis seminar will examine Dylan as a musical, literary, and general cultural ph
 p650
 sg11
 (lp651
-(iapp.views
+(iapp.model
 TimeBlock
 p652
 (dp653
@@ -2217,7 +2217,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=446&backlink
 p658
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p659
 (dp660
@@ -2234,7 +2234,7 @@ VNote: Mandatory film screenings will be held on Monday evenings, 7-9PM.  Studen
 p662
 sg11
 (lp663
-(iapp.views
+(iapp.model
 TimeBlock
 p664
 (dp665
@@ -2261,7 +2261,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=447&backlink
 p670
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p671
 (dp672
@@ -2278,7 +2278,7 @@ VNote: No previous production experience is necessary to take this class, and th
 p674
 sg11
 (lp675
-(iapp.views
+(iapp.model
 TimeBlock
 p676
 (dp677
@@ -2305,7 +2305,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=462&backlink
 p682
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p683
 (dp684
@@ -2324,7 +2324,7 @@ VMany of the classic works of political and ethical theory in the western tradit
 p687
 sg11
 (lp688
-(iapp.views
+(iapp.model
 TimeBlock
 p689
 (dp690
@@ -2351,7 +2351,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=463&backlink
 p695
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p696
 (dp697
@@ -2368,7 +2368,7 @@ VIn this age of rapid globalization and heightened cross-cultural contacts, nati
 p699
 sg11
 (lp700
-(iapp.views
+(iapp.model
 TimeBlock
 p701
 (dp702
@@ -2396,7 +2396,7 @@ p707
 sg31
 V110427
 p708
-sba(iapp.views
+sba(iapp.model
 Seminar
 p709
 (dp710
@@ -2415,7 +2415,7 @@ VThis seminar will address the controversies that swirl around the American deat
 p713
 sg11
 (lp714
-(iapp.views
+(iapp.model
 TimeBlock
 p715
 (dp716
@@ -2443,7 +2443,7 @@ p721
 sg31
 V109475
 p722
-sba(iapp.views
+sba(iapp.model
 Seminar
 p723
 (dp724
@@ -2460,7 +2460,7 @@ VSettled primarily by people from the Scandinavian mainland, Viking Age Iceland 
 p726
 sg11
 (lp727
-(iapp.views
+(iapp.model
 TimeBlock
 p728
 (dp729
@@ -2488,7 +2488,7 @@ p734
 sg31
 V159806
 p735
-sba(iapp.views
+sba(iapp.model
 Seminar
 p736
 (dp737
@@ -2505,7 +2505,7 @@ VPrerequisites: Students are expected to have had some background in economics, 
 p739
 sg11
 (lp740
-(iapp.views
+(iapp.model
 TimeBlock
 p741
 (dp742
@@ -2533,7 +2533,7 @@ p747
 sg31
 V156421
 p748
-sba(iapp.views
+sba(iapp.model
 Seminar
 p749
 (dp750
@@ -2552,7 +2552,7 @@ VHuman rights practitioners confront numerous ethical, strategic, and legal dile
 p753
 sg11
 (lp754
-(iapp.views
+(iapp.model
 TimeBlock
 p755
 (dp756
@@ -2579,7 +2579,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=464&backlink
 p761
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p762
 (dp763
@@ -2596,7 +2596,7 @@ VFor two hours each week, students will work to understand the history, forces a
 p765
 sg11
 (lp766
-(iapp.views
+(iapp.model
 TimeBlock
 p767
 (dp768
@@ -2624,7 +2624,7 @@ p773
 sg31
 V124777
 p774
-sba(iapp.views
+sba(iapp.model
 Seminar
 p775
 (dp776
@@ -2641,7 +2641,7 @@ VThis course considers the degree to which Americans' political opinions and act
 p778
 sg11
 (lp779
-(iapp.views
+(iapp.model
 TimeBlock
 p780
 (dp781
@@ -2669,7 +2669,7 @@ p786
 sg31
 V159837
 p787
-sba(iapp.views
+sba(iapp.model
 Seminar
 p788
 (dp789
@@ -2688,7 +2688,7 @@ VHow we produce and use energy has major implications for the economy, energy se
 p792
 sg11
 (lp793
-(iapp.views
+(iapp.model
 TimeBlock
 p794
 (dp795
@@ -2716,7 +2716,7 @@ p800
 sg31
 V160203
 p801
-sba(iapp.views
+sba(iapp.model
 Seminar
 p802
 (dp803
@@ -2733,7 +2733,7 @@ VThe United States is currently engaged in a \u201cGlobal War on Terrorism.\u201
 p805
 sg11
 (lp806
-(iapp.views
+(iapp.model
 TimeBlock
 p807
 (dp808
@@ -2761,7 +2761,7 @@ p813
 sg31
 V125124
 p814
-sba(iapp.views
+sba(iapp.model
 Seminar
 p815
 (dp816
@@ -2778,7 +2778,7 @@ VHuman rights have become a global lingua franca, invoked by leaders and movemen
 p818
 sg11
 (lp819
-(iapp.views
+(iapp.model
 TimeBlock
 p820
 (dp821
@@ -2806,7 +2806,7 @@ p826
 sg31
 V160211
 p827
-sba(iapp.views
+sba(iapp.model
 Seminar
 p828
 (dp829
@@ -2825,7 +2825,7 @@ VNote: In addition to our regular class meetings, there will be a required guide
 p832
 sg11
 (lp833
-(iapp.views
+(iapp.model
 TimeBlock
 p834
 (dp835
@@ -2853,7 +2853,7 @@ p840
 sg31
 V160213
 p841
-sba(iapp.views
+sba(iapp.model
 Seminar
 p842
 (dp843
@@ -2870,7 +2870,7 @@ VDoes flexible work lead to liberation or loss of identity?  Does it bring self-
 p845
 sg11
 (lp846
-(iapp.views
+(iapp.model
 TimeBlock
 p847
 (dp848
@@ -2897,7 +2897,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=201510000028
 p853
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p854
 (dp855
@@ -2914,7 +2914,7 @@ VThis course will address some of the fundamental questions about the nature of 
 p857
 sg11
 (lp858
-(iapp.views
+(iapp.model
 TimeBlock
 p859
 (dp860
@@ -2942,7 +2942,7 @@ p865
 sg31
 V125718
 p866
-sba(iapp.views
+sba(iapp.model
 Seminar
 p867
 (dp868
@@ -2961,7 +2961,7 @@ VNote: this course does not presume any previous knowledge or experience.\u000a
 p871
 sg11
 (lp872
-(iapp.views
+(iapp.model
 TimeBlock
 p873
 (dp874
@@ -2988,7 +2988,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=465&backlink
 p879
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p880
 (dp881
@@ -3007,7 +3007,7 @@ VThis seminar will approach the Nazi persecution of European Jewry from several 
 p884
 sg11
 (lp885
-(iapp.views
+(iapp.model
 TimeBlock
 p886
 (dp887
@@ -3034,7 +3034,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=492&backlink
 p892
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p893
 (dp894
@@ -3051,7 +3051,7 @@ VThis seminar will introduce students to the history of psychological tests, bot
 p896
 sg11
 (lp897
-(iapp.views
+(iapp.model
 TimeBlock
 p898
 (dp899
@@ -3079,7 +3079,7 @@ p904
 sg31
 V121907
 p905
-sba(iapp.views
+sba(iapp.model
 Seminar
 p906
 (dp907
@@ -3098,7 +3098,7 @@ VGlass is ubiquitous in our daily lives so it may be easy to forget what a remar
 p910
 sg11
 (lp911
-(iapp.views
+(iapp.model
 TimeBlock
 p912
 (dp913
@@ -3125,7 +3125,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=466&backlink
 p918
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p919
 (dp920
@@ -3142,7 +3142,7 @@ VA human interest in ancestry and kinship is found in most cultures. This intere
 p922
 sg11
 (lp923
-(iapp.views
+(iapp.model
 TimeBlock
 p924
 (dp925
@@ -3169,7 +3169,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=448&backlink
 p930
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p931
 (dp932
@@ -3188,7 +3188,7 @@ VThis seminar will focus on how scientists are using state-of-the-art methods fr
 p935
 sg11
 (lp936
-(iapp.views
+(iapp.model
 TimeBlock
 p937
 (dp938
@@ -3215,7 +3215,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=449&backlink
 p943
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p944
 (dp945
@@ -3232,7 +3232,7 @@ VWhat is intelligence? An inquiry into the nature of intelligence can take diffe
 p947
 sg11
 (lp948
-(iapp.views
+(iapp.model
 TimeBlock
 p949
 (dp950
@@ -3259,7 +3259,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=467&backlink
 p955
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p956
 (dp957
@@ -3278,7 +3278,7 @@ VThis seminar explores the human sense of \u2018place\u2019 in spatial, personal
 p960
 sg11
 (lp961
-(iapp.views
+(iapp.model
 TimeBlock
 p962
 (dp963
@@ -3305,7 +3305,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=450&backlink
 p968
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p969
 (dp970
@@ -3322,7 +3322,7 @@ VWhat does it mean to be human? Do we understand "humanity" from traits we share
 p972
 sg11
 (lp973
-(iapp.views
+(iapp.model
 TimeBlock
 p974
 (dp975
@@ -3349,7 +3349,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=451&backlink
 p980
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p981
 (dp982
@@ -3366,7 +3366,7 @@ VNote: There are no prerequisites for this course and it does not require any sc
 p984
 sg11
 (lp985
-(iapp.views
+(iapp.model
 TimeBlock
 p986
 (dp987
@@ -3393,7 +3393,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=452&backlink
 p992
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p993
 (dp994
@@ -3412,7 +3412,7 @@ VThe internet has become a central part of our everyday life, a conduit for comm
 p997
 sg11
 (lp998
-(iapp.views
+(iapp.model
 TimeBlock
 p999
 (dp1000
@@ -3439,7 +3439,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=453&backlink
 p1005
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1006
 (dp1007
@@ -3458,7 +3458,7 @@ VSeveral times a day, you decide what to eat and drink.  What happens to the foo
 p1010
 sg11
 (lp1011
-(iapp.views
+(iapp.model
 TimeBlock
 p1012
 (dp1013
@@ -3485,7 +3485,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=454&backlink
 p1018
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1019
 (dp1020
@@ -3502,7 +3502,7 @@ VComics and graphic novels, or sequential art, are one of the world\u2019s great
 p1022
 sg11
 (lp1023
-(iapp.views
+(iapp.model
 TimeBlock
 p1024
 (dp1025
@@ -3529,7 +3529,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=455&backlink
 p1030
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1031
 (dp1032
@@ -3548,7 +3548,7 @@ VNote: Attendance will be required at a performance of The Abbey Theatre of Irel
 p1035
 sg11
 (lp1036
-(iapp.views
+(iapp.model
 TimeBlock
 p1037
 (dp1038
@@ -3575,7 +3575,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=485&backlink
 p1043
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1044
 (dp1045
@@ -3592,7 +3592,7 @@ VTypical means of everyday communication, such as speaking, writing, or printing
 p1047
 sg11
 (lp1048
-(iapp.views
+(iapp.model
 TimeBlock
 p1049
 (dp1050
@@ -3619,7 +3619,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=456&backlink
 p1055
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1056
 (dp1057
@@ -3638,7 +3638,7 @@ VMoving chronologically from the the early national period to the turn of the tw
 p1060
 sg11
 (lp1061
-(iapp.views
+(iapp.model
 TimeBlock
 p1062
 (dp1063
@@ -3665,7 +3665,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=468&backlink
 p1068
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1069
 (dp1070
@@ -3684,7 +3684,7 @@ VThis course is about remembering, responding to and reflecting about experience
 p1073
 sg11
 (lp1074
-(iapp.views
+(iapp.model
 TimeBlock
 p1075
 (dp1076
@@ -3711,7 +3711,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=469&backlink
 p1081
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1082
 (dp1083
@@ -3730,7 +3730,7 @@ VDuring the First World War, a young British officer by the name of T.E. Lawrenc
 p1086
 sg11
 (lp1087
-(iapp.views
+(iapp.model
 TimeBlock
 p1088
 (dp1089
@@ -3757,7 +3757,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=457&backlink
 p1094
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1095
 (dp1096
@@ -3774,7 +3774,7 @@ VNote: Course conducted in English with all works available in English translati
 p1098
 sg11
 (lp1099
-(iapp.views
+(iapp.model
 TimeBlock
 p1100
 (dp1101
@@ -3801,7 +3801,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=470&backlink
 p1106
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1107
 (dp1108
@@ -3818,7 +3818,7 @@ VNote: All readings are in translation. The course will include visits to both t
 p1110
 sg11
 (lp1111
-(iapp.views
+(iapp.model
 TimeBlock
 p1112
 (dp1113
@@ -3845,7 +3845,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=458&backlink
 p1118
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1119
 (dp1120
@@ -3862,7 +3862,7 @@ VHere's a hard truth: You are going to die. That's nothing against you, of cours
 p1122
 sg11
 (lp1123
-(iapp.views
+(iapp.model
 TimeBlock
 p1124
 (dp1125
@@ -3889,7 +3889,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=459&backlink
 p1130
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1131
 (dp1132
@@ -3906,7 +3906,7 @@ VThe first part of course will include close readings, video tours and on-foot e
 p1134
 sg11
 (lp1135
-(iapp.views
+(iapp.model
 TimeBlock
 p1136
 (dp1137
@@ -3933,7 +3933,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=460&backlink
 p1142
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1143
 (dp1144
@@ -3950,7 +3950,7 @@ VWhat determines the moral values and principles that orient and guide the lives
 p1146
 sg11
 (lp1147
-(iapp.views
+(iapp.model
 TimeBlock
 p1148
 (dp1149
@@ -3977,7 +3977,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=481&backlink
 p1154
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1155
 (dp1156
@@ -3996,7 +3996,7 @@ VAlmost always, we learn to read literature and the world through a framework th
 p1159
 sg11
 (lp1160
-(iapp.views
+(iapp.model
 TimeBlock
 p1161
 (dp1162
@@ -4023,7 +4023,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=471&backlink
 p1167
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1168
 (dp1169
@@ -4042,7 +4042,7 @@ VThis seminar will focus on the modes of representing the divine in the ancient 
 p1172
 sg11
 (lp1173
-(iapp.views
+(iapp.model
 TimeBlock
 p1174
 (dp1175
@@ -4069,7 +4069,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=482&backlink
 p1180
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1181
 (dp1182
@@ -4088,7 +4088,7 @@ VNote: No previous background in Jewish Studies or knowledge of Hebrew is requir
 p1185
 sg11
 (lp1186
-(iapp.views
+(iapp.model
 TimeBlock
 p1187
 (dp1188
@@ -4115,7 +4115,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=483&backlink
 p1193
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1194
 (dp1195
@@ -4134,7 +4134,7 @@ VNote: Design skill, expensive software, and specialized computer hardware ARE N
 p1198
 sg11
 (lp1199
-(iapp.views
+(iapp.model
 TimeBlock
 p1200
 (dp1201
@@ -4161,7 +4161,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=484&backlink
 p1206
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1207
 (dp1208
@@ -4180,7 +4180,7 @@ VNinety-five percent of the Africans transported to the Americas from the 16th c
 p1211
 sg11
 (lp1212
-(iapp.views
+(iapp.model
 TimeBlock
 p1213
 (dp1214
@@ -4207,7 +4207,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=486&backlink
 p1219
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1220
 (dp1221
@@ -4224,7 +4224,7 @@ VThis freshman seminar will cover landmark Supreme Court decisions in American h
 p1223
 sg11
 (lp1224
-(iapp.views
+(iapp.model
 TimeBlock
 p1225
 (dp1226
@@ -4251,7 +4251,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=487&backlink
 p1231
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1232
 (dp1233
@@ -4268,7 +4268,7 @@ VFor centuries, communicable diseases ravaged different communities causing mass
 p1235
 sg11
 (lp1236
-(iapp.views
+(iapp.model
 TimeBlock
 p1237
 (dp1238
@@ -4295,7 +4295,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=488&backlink
 p1243
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1244
 (dp1245
@@ -4314,7 +4314,7 @@ VThis course will examine nine major social problems facing the United States to
 p1248
 sg11
 (lp1249
-(iapp.views
+(iapp.model
 TimeBlock
 p1250
 (dp1251
@@ -4341,7 +4341,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=472&backlink
 p1256
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1257
 (dp1258
@@ -4360,7 +4360,7 @@ VEveryone with serious responsibilities, at work and throughout their lives, fac
 p1261
 sg11
 (lp1262
-(iapp.views
+(iapp.model
 TimeBlock
 p1263
 (dp1264
@@ -4387,7 +4387,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=489&backlink
 p1269
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1270
 (dp1271
@@ -4406,7 +4406,7 @@ VWhat are the origins of the people, cultures, and civilizations of East Asia, a
 p1274
 sg11
 (lp1275
-(iapp.views
+(iapp.model
 TimeBlock
 p1276
 (dp1277
@@ -4433,7 +4433,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=473&backlink
 p1282
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1283
 (dp1284
@@ -4450,7 +4450,7 @@ VCampus sexual assault has emerged into the national discourse in an unprecedent
 p1286
 sg11
 (lp1287
-(iapp.views
+(iapp.model
 TimeBlock
 p1288
 (dp1289
@@ -4477,7 +4477,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=474&backlink
 p1294
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1295
 (dp1296
@@ -4496,7 +4496,7 @@ VMuch of our history is written in our genes, and analyses of ancient and modern
 p1299
 sg11
 (lp1300
-(iapp.views
+(iapp.model
 TimeBlock
 p1301
 (dp1302
@@ -4523,7 +4523,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=490&backlink
 p1307
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1308
 (dp1309
@@ -4542,7 +4542,7 @@ VNote: As part of this dual process of investigation and application, students w
 p1312
 sg11
 (lp1313
-(iapp.views
+(iapp.model
 TimeBlock
 p1314
 (dp1315
@@ -4569,7 +4569,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=491&backlink
 p1320
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1321
 (dp1322
@@ -4586,7 +4586,7 @@ VSomewhere in the Universe a massive star ends its life in a supernova explosion
 p1324
 sg11
 (lp1325
-(iapp.views
+(iapp.model
 TimeBlock
 p1326
 (dp1327
@@ -4614,7 +4614,7 @@ p1332
 sg31
 V159717
 p1333
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1334
 (dp1335
@@ -4631,7 +4631,7 @@ VEarthquakes shape the surface of the Earth by building mountains and tearing co
 p1337
 sg11
 (lp1338
-(iapp.views
+(iapp.model
 TimeBlock
 p1339
 (dp1340
@@ -4658,7 +4658,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=493&backlink
 p1345
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1346
 (dp1347
@@ -4675,7 +4675,7 @@ VSince the Universe is expanding, it must have been denser in the past. But even
 p1349
 sg11
 (lp1350
-(iapp.views
+(iapp.model
 TimeBlock
 p1351
 (dp1352
@@ -4703,7 +4703,7 @@ p1357
 sg31
 V108389
 p1358
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1359
 (dp1360
@@ -4720,7 +4720,7 @@ VNOTE: Transportation, accommodations, and meals at the Harvard Forest will be p
 p1362
 sg11
 (lp1363
-(iapp.views
+(iapp.model
 TimeBlock
 p1364
 (dp1365
@@ -4730,7 +4730,7 @@ sg16
 g486
 sg20
 F0.0
-sba(iapp.views
+sba(iapp.model
 TimeBlock
 p1366
 (dp1367
@@ -4758,7 +4758,7 @@ p1372
 sg31
 V112349
 p1373
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1374
 (dp1375
@@ -4777,7 +4777,7 @@ VThis course is for students who would like to be introduced to the ideas of qua
 p1378
 sg11
 (lp1379
-(iapp.views
+(iapp.model
 TimeBlock
 p1380
 (dp1381
@@ -4805,7 +4805,7 @@ p1386
 sg31
 V160193
 p1387
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1388
 (dp1389
@@ -4824,7 +4824,7 @@ VNote: There will be a required field trip to Winchester, Mystic Lakes, date TBD
 p1392
 sg11
 (lp1393
-(iapp.views
+(iapp.model
 TimeBlock
 p1394
 (dp1395
@@ -4852,7 +4852,7 @@ p1400
 sg31
 V108564
 p1401
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1402
 (dp1403
@@ -4871,7 +4871,7 @@ VThree types of big questions will be considered. The first are the big question
 p1406
 sg11
 (lp1407
-(iapp.views
+(iapp.model
 TimeBlock
 p1408
 (dp1409
@@ -4899,7 +4899,7 @@ p1414
 sg31
 V160194
 p1415
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1416
 (dp1417
@@ -4918,7 +4918,7 @@ VA physician occupies a unique perch, regularly witnessing life\u2019s great mys
 p1420
 sg11
 (lp1421
-(iapp.views
+(iapp.model
 TimeBlock
 p1422
 (dp1423
@@ -4946,7 +4946,7 @@ p1428
 sg31
 V117969
 p1429
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1430
 (dp1431
@@ -4963,7 +4963,7 @@ VPrerequisites: All students are welcome, but this seminar is particularly geare
 p1433
 sg11
 (lp1434
-(iapp.views
+(iapp.model
 TimeBlock
 p1435
 (dp1436
@@ -4973,7 +4973,7 @@ sg16
 g19
 sg20
 F19.0
-sba(iapp.views
+sba(iapp.model
 TimeBlock
 p1437
 (dp1438
@@ -5001,7 +5001,7 @@ p1443
 sg31
 V125133
 p1444
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1445
 (dp1446
@@ -5020,7 +5020,7 @@ VPlease Note: There will be interviews for selected students during Opening Days
 p1449
 sg11
 (lp1450
-(iapp.views
+(iapp.model
 TimeBlock
 p1451
 (dp1452
@@ -5030,7 +5030,7 @@ sg16
 g72
 sg20
 F15.0
-sba(iapp.views
+sba(iapp.model
 TimeBlock
 p1453
 (dp1454
@@ -5058,7 +5058,7 @@ p1459
 sg31
 V118807
 p1460
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1461
 (dp1462
@@ -5075,7 +5075,7 @@ VAfter a century of studying how to cure mental illness, scientists have started
 p1464
 sg11
 (lp1465
-(iapp.views
+(iapp.model
 TimeBlock
 p1466
 (dp1467
@@ -5103,7 +5103,7 @@ p1472
 sg31
 V128118
 p1473
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1474
 (dp1475
@@ -5122,7 +5122,7 @@ VNote: Required field trips to the Arnold Arboretum of Harvard University, the M
 p1478
 sg11
 (lp1479
-(iapp.views
+(iapp.model
 TimeBlock
 p1480
 (dp1481
@@ -5150,7 +5150,7 @@ p1486
 sg31
 V128119
 p1487
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1488
 (dp1489
@@ -5167,7 +5167,7 @@ VUnderstanding "normal" growth and development may seem like a relatively easy t
 p1491
 sg11
 (lp1492
-(iapp.views
+(iapp.model
 TimeBlock
 p1493
 (dp1494
@@ -5195,7 +5195,7 @@ p1499
 sg31
 V128122
 p1500
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1501
 (dp1502
@@ -5212,7 +5212,7 @@ VThis seminar will give an overview and introduction to modern physics.  As with
 p1504
 sg11
 (lp1505
-(iapp.views
+(iapp.model
 TimeBlock
 p1506
 (dp1507
@@ -5240,7 +5240,7 @@ p1512
 sg31
 V121549
 p1513
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1514
 (dp1515
@@ -5257,7 +5257,7 @@ V\u201cCancer\u201d represents hundreds of different diseases with a wide variet
 p1517
 sg11
 (lp1518
-(iapp.views
+(iapp.model
 TimeBlock
 p1519
 (dp1520
@@ -5285,7 +5285,7 @@ p1525
 sg31
 V125960
 p1526
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1527
 (dp1528
@@ -5302,7 +5302,7 @@ VIn the US, energy use creates large political and social tensions and much emph
 p1530
 sg11
 (lp1531
-(iapp.views
+(iapp.model
 TimeBlock
 p1532
 (dp1533
@@ -5329,7 +5329,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=494&backlink
 p1538
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1539
 (dp1540
@@ -5346,7 +5346,7 @@ VIn the fall of 2012, more than 20 million students enrolled in U.S. colleges an
 p1542
 sg11
 (lp1543
-(iapp.views
+(iapp.model
 TimeBlock
 p1544
 (dp1545
@@ -5374,7 +5374,7 @@ p1550
 sg31
 V121171
 p1551
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1552
 (dp1553
@@ -5393,7 +5393,7 @@ VAmerican short stories, as a genre, have always been used to capture \u201cloca
 p1556
 sg11
 (lp1557
-(iapp.views
+(iapp.model
 TimeBlock
 p1558
 (dp1559
@@ -5421,7 +5421,7 @@ p1564
 sg31
 V156930
 p1565
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1566
 (dp1567
@@ -5438,7 +5438,7 @@ VThroughout the centuries and across all continents, men and women have told sto
 p1569
 sg11
 (lp1570
-(iapp.views
+(iapp.model
 TimeBlock
 p1571
 (dp1572
@@ -5466,7 +5466,7 @@ p1577
 sg31
 V122447
 p1578
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1579
 (dp1580
@@ -5483,7 +5483,7 @@ VPrerequisites: Ideally students should have a good high school physics course; 
 p1582
 sg11
 (lp1583
-(iapp.views
+(iapp.model
 TimeBlock
 p1584
 (dp1585
@@ -5511,7 +5511,7 @@ p1590
 sg31
 V108513
 p1591
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1592
 (dp1593
@@ -5528,7 +5528,7 @@ VAcross the centuries, philosophers, poets, scientists, and mathematicians have 
 p1595
 sg11
 (lp1596
-(iapp.views
+(iapp.model
 TimeBlock
 p1597
 (dp1598
@@ -5555,7 +5555,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=495&backlink
 p1603
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1604
 (dp1605
@@ -5572,7 +5572,7 @@ VMarketing, as you will find in this seminar, refers to the set of analyses and 
 p1607
 sg11
 (lp1608
-(iapp.views
+(iapp.model
 TimeBlock
 p1609
 (dp1610
@@ -5600,7 +5600,7 @@ p1615
 sg31
 V159740
 p1616
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1617
 (dp1618
@@ -5617,7 +5617,7 @@ VIn this seminar we will explore the interaction of law and society using the le
 p1620
 sg11
 (lp1621
-(iapp.views
+(iapp.model
 TimeBlock
 p1622
 (dp1623
@@ -5644,7 +5644,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=321&backlink
 p1628
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1629
 (dp1630
@@ -5661,7 +5661,7 @@ VStudents entering the Class of 2020 likely can\u2019t remember a time before th
 p1632
 sg11
 (lp1633
-(iapp.views
+(iapp.model
 TimeBlock
 p1634
 (dp1635
@@ -5689,7 +5689,7 @@ p1640
 sg31
 V159741
 p1641
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1642
 (dp1643
@@ -5708,7 +5708,7 @@ VSince the arrival of Africans from Africa to America, their health and health c
 p1646
 sg11
 (lp1647
-(iapp.views
+(iapp.model
 TimeBlock
 p1648
 (dp1649
@@ -5736,7 +5736,7 @@ p1654
 sg31
 V159832
 p1655
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1656
 (dp1657
@@ -5753,7 +5753,7 @@ VWhat are museums?  Where did they come from?  What exactly do they do, and why?
 p1659
 sg11
 (lp1660
-(iapp.views
+(iapp.model
 TimeBlock
 p1661
 (dp1662
@@ -5780,7 +5780,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=475&backlink
 p1667
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1668
 (dp1669
@@ -5797,7 +5797,7 @@ VEconomists have a very positive view of the role of markets. The intellectual f
 p1671
 sg11
 (lp1672
-(iapp.views
+(iapp.model
 TimeBlock
 p1673
 (dp1674
@@ -5825,7 +5825,7 @@ p1679
 sg31
 V160196
 p1680
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1681
 (dp1682
@@ -5842,7 +5842,7 @@ VThe Middle East is home to many diverse peoples, with ancient and proud culture
 p1684
 sg11
 (lp1685
-(iapp.views
+(iapp.model
 TimeBlock
 p1686
 (dp1687
@@ -5870,7 +5870,7 @@ p1692
 sg31
 V124885
 p1693
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1694
 (dp1695
@@ -5887,7 +5887,7 @@ VTechnology designers are the new policy makers. No one elected them and most pe
 p1697
 sg11
 (lp1698
-(iapp.views
+(iapp.model
 TimeBlock
 p1699
 (dp1700
@@ -5915,7 +5915,7 @@ p1705
 sg31
 V160206
 p1706
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1707
 (dp1708
@@ -5934,7 +5934,7 @@ VDecades of research tell us that the foundations of healthy development are bui
 p1711
 sg11
 (lp1712
-(iapp.views
+(iapp.model
 TimeBlock
 p1713
 (dp1714
@@ -5962,7 +5962,7 @@ p1719
 sg31
 V160221
 p1720
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1721
 (dp1722
@@ -5981,7 +5981,7 @@ VAfter a review of what is currently known about greenhouse gas emissions\u2019 
 p1725
 sg11
 (lp1726
-(iapp.views
+(iapp.model
 TimeBlock
 p1727
 (dp1728
@@ -6009,7 +6009,7 @@ p1733
 sg31
 V115417
 p1734
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1735
 (dp1736
@@ -6028,7 +6028,7 @@ VWhy do students feel ill before an exam? Why do women seem to suffer more than 
 p1739
 sg11
 (lp1740
-(iapp.views
+(iapp.model
 TimeBlock
 p1741
 (dp1742
@@ -6056,7 +6056,7 @@ p1747
 sg31
 V128123
 p1748
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1749
 (dp1750
@@ -6073,7 +6073,7 @@ VMovement is a fundamental property of life that underlies many biological funct
 p1752
 sg11
 (lp1753
-(iapp.views
+(iapp.model
 TimeBlock
 p1754
 (dp1755
@@ -6100,7 +6100,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=496&backlink
 p1760
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1761
 (dp1762
@@ -6117,7 +6117,7 @@ VNote: This seminar is open to all but may be of particular interest to those co
 p1764
 sg11
 (lp1765
-(iapp.views
+(iapp.model
 TimeBlock
 p1766
 (dp1767
@@ -6144,7 +6144,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=476&backlink
 p1772
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1773
 (dp1774
@@ -6161,7 +6161,7 @@ VHow does the way our brain is encoded to process visual signals influence the c
 p1776
 sg11
 (lp1777
-(iapp.views
+(iapp.model
 TimeBlock
 p1778
 (dp1779
@@ -6188,7 +6188,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=477&backlink
 p1784
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1785
 (dp1786
@@ -6205,7 +6205,7 @@ VPrerequisites: A background in AP Physics would be helpful. Complex numbers and
 p1788
 sg11
 (lp1789
-(iapp.views
+(iapp.model
 TimeBlock
 p1790
 (dp1791
@@ -6232,7 +6232,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=497&backlink
 p1796
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1797
 (dp1798
@@ -6249,7 +6249,7 @@ VThe human gut is colonized by trillions of microorganisms that exert a profound
 p1800
 sg11
 (lp1801
-(iapp.views
+(iapp.model
 TimeBlock
 p1802
 (dp1803
@@ -6276,7 +6276,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=498&backlink
 p1808
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1809
 (dp1810
@@ -6293,7 +6293,7 @@ VThrough the creation of a personal sound story, students are invited to discove
 p1812
 sg11
 (lp1813
-(iapp.views
+(iapp.model
 TimeBlock
 p1814
 (dp1815
@@ -6320,7 +6320,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=499&backlink
 p1820
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1821
 (dp1822
@@ -6337,7 +6337,7 @@ VAt heart, Theodore Roosevelt was an adventurer. At regular intervals throughout
 p1824
 sg11
 (lp1825
-(iapp.views
+(iapp.model
 TimeBlock
 p1826
 (dp1827
@@ -6364,7 +6364,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=500&backlink
 p1832
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1833
 (dp1834
@@ -6381,7 +6381,7 @@ VHow good is music at telling jokes? What kinds of jokes and related forms of hu
 p1836
 sg11
 (lp1837
-(iapp.views
+(iapp.model
 TimeBlock
 p1838
 (dp1839
@@ -6408,7 +6408,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=478&backlink
 p1844
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1845
 (dp1846
@@ -6425,7 +6425,7 @@ VWe will read Chretien de Troyes\u2019 Tale of the Grail, the most ancient known
 p1848
 sg11
 (lp1849
-(iapp.views
+(iapp.model
 TimeBlock
 p1850
 (dp1851
@@ -6452,7 +6452,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=501&backlink
 p1856
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1857
 (dp1858
@@ -6469,7 +6469,7 @@ VThis seminar studies in detail the poetry and prose of two of the most signific
 p1860
 sg11
 (lp1861
-(iapp.views
+(iapp.model
 TimeBlock
 p1862
 (dp1863
@@ -6496,7 +6496,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=502&backlink
 p1868
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1869
 (dp1870
@@ -6513,7 +6513,7 @@ VBusiness as a way of life has existed for thousands of years. In The Beginnings
 p1872
 sg11
 (lp1873
-(iapp.views
+(iapp.model
 TimeBlock
 p1874
 (dp1875
@@ -6540,7 +6540,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=503&backlink
 p1880
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1881
 (dp1882
@@ -6557,7 +6557,7 @@ VThe year 2017 will mark the centennial of the Russian Revolution. The century t
 p1884
 sg11
 (lp1885
-(iapp.views
+(iapp.model
 TimeBlock
 p1886
 (dp1887
@@ -6584,7 +6584,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=504&backlink
 p1892
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1893
 (dp1894
@@ -6601,7 +6601,7 @@ VIn late 1942, with World War II raging, US President Franklin D. Roosevelt sent
 p1896
 sg11
 (lp1897
-(iapp.views
+(iapp.model
 TimeBlock
 p1898
 (dp1899
@@ -6628,7 +6628,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=506&backlink
 p1904
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1905
 (dp1906
@@ -6645,7 +6645,7 @@ VPrerequisite: Economics 10a or equivalent\u000a\u000aClimate change is one of
 p1908
 sg11
 (lp1909
-(iapp.views
+(iapp.model
 TimeBlock
 p1910
 (dp1911
@@ -6672,7 +6672,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=507&backlink
 p1916
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1917
 (dp1918
@@ -6689,7 +6689,7 @@ VShould animals have the rights of persons? What about very sophisticated robots
 p1920
 sg11
 (lp1921
-(iapp.views
+(iapp.model
 TimeBlock
 p1922
 (dp1923
@@ -6716,7 +6716,7 @@ Vhttp://www.freshsem.fas.harvard.edu/student/sem-detail.cgi?seminar=508&backlink
 p1928
 sg31
 g251
-sba(iapp.views
+sba(iapp.model
 Seminar
 p1929
 (dp1930
@@ -6733,7 +6733,7 @@ VNote: In addition to traditional class sessions, the seminar will incorporate f
 p1932
 sg11
 (lp1933
-(iapp.views
+(iapp.model
 TimeBlock
 p1934
 (dp1935

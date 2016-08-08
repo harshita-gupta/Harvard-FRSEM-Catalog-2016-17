@@ -2,3 +2,5 @@
 **/.idea/tasks.xml
 **.iws
 .idea/workspace.xml
+
+*.pyc
