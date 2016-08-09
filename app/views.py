@@ -12,9 +12,10 @@ import socket
 import keen
 from model import filterSeminars, Seminar, TimeBlock, Day
 from datasource import retrieveSeminars
+from config import KEEN_PROJECT_ID, KEEN_WRITE_KEY
 
-keen.project_id = "57a4ec410727190b418cc7fc"
-keen.write_key = "3e8d74ce621627a69bb65ba5a0e7eb4877fe51c1ea62703708a3c28e5bbaaf53c28f0b97d7f3baddf19d98e9a08b634c88fbc13c9c3b39a46873f2f0154dd4e461488c13bce00d4cb2c913a2586c3fff6151d3540b74d6b3518cc3eba8b7cbcf"
+keen.project_id = KEEN_PROJECT_ID
+keen.write_key = KEEN_WRITE_KEY
 
 alert = ""
 applyLinks = ""
@@ -53,7 +54,8 @@ def home():
             else:
                 moreConflicts = False
         keen.add_event("seminar_loads",
-        {"fallterm" : str(fallTerm),
+        {"ip" : request.remote_addr,
+        "fallterm" : str(fallTerm),
         "springterm" : str(springTerm),
         "searches": str(searchKeywords),
         "conflicts": str(conflicts) })
