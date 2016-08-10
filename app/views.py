@@ -12,7 +12,7 @@ import socket
 import keen
 from model import filterSeminars, Seminar, TimeBlock, Day
 from datasource import retrieveSeminars
-from config import KEEN_PROJECT_ID, KEEN_WRITE_KEY
+from /config import KEEN_PROJECT_ID, KEEN_WRITE_KEY
 
 keen.project_id = KEEN_PROJECT_ID
 keen.write_key = KEEN_WRITE_KEY
